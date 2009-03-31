@@ -1,0 +1,22 @@
+@InProceedings{CAVE_0059, 
+author = {S.G. Narasimhan and C. Wang and S.K. Nayar},
+title = {{A}ll the {I}mages of an {O}utdoor {S}cene},
+booktitle = {Europian Conference on Computer Vision (ECCV)},
+volume = {III},
+pages = {148--162},
+month = {May},
+year = {2002}
+}
+
+@inproceedings{957143,
+ author = {Li,, Dongge and Dimitrova,, Nevenka and Li,, Mingkun and Sethi,, Ishwar K.},
+ title = {Multimedia content processing through cross-modal association},
+ booktitle = {MULTIMEDIA '03: Proceedings of the eleventh ACM international conference on Multimedia},
+ year = {2003},
+ isbn = {1-58113-722-2},
+ pages = {604--611},
+ location = {Berkeley, CA, USA},
+ doi = {http://doi.acm.org/10.1145/957013.957143},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
