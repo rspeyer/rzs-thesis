@@ -1,0 +1,41 @@
+%
+%
+% Sample  Vita
+% This is done in a list environment.
+%
+% Personal heading
+\begin{center}
+{\large\thesisauthor}
+\end{center}
+%
+% Need to 'fold' long labels
+%
+\newcommand{\vitalabel}[1]%
+  {\raisebox{0pt}[1ex][0pt]
+    {\makebox[\labelwidth][l]%
+      {\parbox[t]{\labelwidth}{\hspace{0pt}\textbf{#1}}}}}
+%
+% Here's the list definition
+%
+\begin{list}
+  {}%                                        nodefault label
+  { \renewcommand{\makelabel}{\vitalabel}%   setting labels
+    \setlength{\labelwidth}{100pt}%          label width
+    \setlength{\leftmargin}{120pt}%
+    \setlength{\itemindent}{0pt}%            don't indent first line of items
+    \setlength{\parsep}{\baselineskip}%               space between paragraphs
+    \setlength{\itemsep}{5pt}%               additional space between items
+    }
+\item[Date of Birth] October 11, 1986
+\item[Place of Birth] Johannesburg, South Africa
+\item[Degrees] B.S.\ Computer Science, May 2009 \\
+	M.S.\ Computer Science, May 2009 \\
+\item[Professional\linebreak Societies]
+  Association for Computing Machines \\
+\item[Publications]
+  N. Jacobs, S. Satkin, N. Roman, R. Speyer, and R. Pless. Geolocating static cameras. In \textit{Proc. IEEE International Conference on Computer Vision}, Oct. 2007.
+  
+\end{list}
+\flushright
+\thesismonth\ \thesisyear
+
