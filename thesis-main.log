@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.24)  30 MAR 2009 20:38
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.24)  31 MAR 2009 12:37
 entering extended mode
 **C:/Documents*and*Settings/gpu/Desktop/Richard*Speyer/Webcam*Signals/papers/th
 esis/thesis-main.tex
@@ -139,58 +139,47 @@ LaTeX Font Info:    ... okay on input line 62.
 LaTeX Info: Redefining \dots on input line 62.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (thesis-front.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 30.
-Missing character: There is no Õ in font cmr6!
- [0
+ (thesis-front.tex [0
 
 
 
 {C:/Documents and Settings/All Users/Application Data/MiKTeX/2.7/pdftex/config/
 pdftex.map}]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 113.
- [1]
 Missing character: There is no Õ in font cmr12!
  [2]
 Missing character: There is no Õ in font cmr12!
  [3] [4
 
-] [5] (thesis-main.toc
+] (thesis-main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 1.
-
-[6
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+ [5
 
 ])
 \tf@toc=\write3
- [7] (thesis-main.lot
-Overfull \hbox (0.40749pt too wide) in paragraph at lines 5--5
+ [6]
+(thesis-main.lot
+Overfull \hbox (0.40749pt too wide) in paragraph at lines 4--4
  \OT1/cmr/m/n/12 multi-lined ta-ble la-bel/title, then the 2nd and all ad-di-ti
 onal lines should 
  []
 
 )
 \tf@lot=\write4
- [8
+ [7
 
-] (thesis-main.lof
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 3.
-)
+] (thesis-main.lof)
 \tf@lof=\write5
- [9
-
-]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 222.
-) [10
+) [8
 
 ] (thesis-chapter1.tex
 Chapter 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 30.
 [1
 
 
@@ -204,7 +193,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
  [2]
-<justafigure.pdf, id=55, 95.35625pt x 100.375pt>
+<justafigure.pdf, id=41, 95.35625pt x 100.375pt>
 File: justafigure.pdf Graphic file (type pdf)
  <use justafigure.pdf> [3 <justafigure.pdf>] [4] [5]) [6] (thesis-chapter2.tex
 Chapter 2.
@@ -230,7 +219,10 @@ Appendix B.
 
 
 
-] [17]) [18] (thesis-appendixC.tex
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 56.
+ [17]) [18] (thesis-appendixC.tex
 Appendix C.
 ) [19
 
@@ -287,11 +279,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--33
 [] \OT1/cmr/bx/n/12 Pro-fes-sional
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
-
- []
-
 ) [25
 
 ] [25
@@ -299,34 +286,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 ]) (thesis-main.aux (thesis-front.aux) (thesis-chapter1.aux)
 (thesis-chapter2.aux) (thesis-chapter3.aux) (thesis-appendixA.aux)
 (thesis-appendixB.aux) (thesis-appendixC.aux) (thesis-appendixD.aux)
-(thesis-back.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(thesis-back.aux)) ) 
 Here is how much of TeX's memory you used:
- 2248 strings out of 95340
- 33232 string characters out of 1184155
+ 2245 strings out of 95340
+ 33178 string characters out of 1184155
  100802 words of memory out of 1500000
- 5372 multiletter control sequences out of 110000
- 13766 words of font info for 48 fonts, out of 1200000 for 2000
+ 5369 multiletter control sequences out of 110000
+ 13150 words of font info for 46 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  36i,9n,38p,575b,260s stack positions out of 5000i,500n,10000p,200000b,5000s
-<C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx10.pfb><C:/Program Fi
-les/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.7/f
-onts/type1/bluesky/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesk
-y/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi8.pfb><
-C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr10.pfb><C:/Program Files/
-MiKTeX 2.7/fonts/type1/bluesky/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.7/fonts/
-type1/bluesky/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/c
-mr6.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr7.pfb><C:/Progra
-m Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.7
-/fonts/type1/bluesky/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/blu
-esky/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmti12.p
-fb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmtt12.pfb>
-Output written on thesis-main.pdf (37 pages, 202462 bytes).
+<C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx10.
+pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx12.pfb><C:/Program 
+Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.7/
+fonts/type1/bluesky/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/blue
+sky/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr10.pfb>
+<C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr12.pfb><C:/Program Files
+/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.7/fonts/
+type1/bluesky/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/c
+mr8.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsl12.pfb><C:/Prog
+ram Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy10.pfb><C:/Program Files/MiKTeX
+ 2.7/fonts/type1/bluesky/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1
+/bluesky/cm/cmtt12.pfb>
+Output written on thesis-main.pdf (34 pages, 169895 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
+ 184 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

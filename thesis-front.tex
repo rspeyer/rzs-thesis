@@ -14,7 +14,7 @@
 % theses.
 
 \begin{thesistitlepage}               %% Generate the title page.
-%\iffalse
+\iffalse
 \begin{singlespace}
 \tiny
 {\small \textbf{How to use this document:}}
@@ -58,11 +58,11 @@ dissertation guidelines are published on the Graduate School web site located
 with other documentation for GSAS policies and guides.  Be sure to read
 ``Important reminders'' in paragraph above.
 \end{singlespace}
-%\fi
+\fi
 \end{thesistitlepage}
 
+\iffalse
 \begin{thesiscopyrightpage}                 %% Generate the copyright page.
-%\iffalse
 \begin{singlespace}
 \scriptsize
 {\small \textbf{Important Notes Regarding Copyright Option:}} \\
@@ -117,8 +117,8 @@ helpful starting point.  \textbf{REMINDER:} When you remove these comments, be
 sure to leave the copyright information centered both vertically and
 horizontally on the page.
 \end{singlespace}
-%\fi
 \end{thesiscopyrightpage}
+\fi
 
 \begin{thesisabstract}
 \textbf{Reminders of what needs to be updated:}
@@ -185,20 +185,20 @@ within my department who have reviewed this thesis and helped support the
 related research.
 \end{thesisacknowledgments}
 
+\iffalse
 \begin{thesisdedicationpage}                %% Generate the dedication page.
-%\iffalse
 \textbf{Note:} You may include a special dedication as shown here.  If you
 include this page, be sure to keep it brief and center it on the page both
 horizontally and vertically.  Alternatively, you may remove this page
 altogether, and a special dedication can be placed as the final paragraph to
 your acknowledgments page (as shown in this document on the preceeding page).
-%\fi
 \end{thesisdedicationpage}
+\fi
 
 \begin{singlespace}
 \tableofcontents
 
-%\iffalse
+\iffalse
 \renewcommand{\listoftablespostscript}{
 \small
 \textbf{Note:} Be consistent in aligning multi-lined table-names, figure-names,
@@ -208,13 +208,14 @@ long table name) wrap and align immediately under the 1st character of the
 title or name with which they are associated in the line immediately above ---
 as shown in the ``Table 2.1'' example above.   Whatever approach you take, be
 consistent.}
-%\fi
+\fi
 
 \listoftables
 
 \listoffigures
 \end{singlespace}
 
+\iffalse
 \chapter{Preface}
 
 This guide contains the School of Engineering's rules for formatting theses and
@@ -241,6 +242,7 @@ is usually used to explain further details surrounding the background and
 motivation for the work.  You can remove it completely}, but then be sure the
 reference to this page is also removed from the Table of Contents.  The
 majority of students do not include a preface page.
+\fi
 
 %%
 %% For List of Abbreviations, Glossary or Nomenclature also
