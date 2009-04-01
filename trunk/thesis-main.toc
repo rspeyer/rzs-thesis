@@ -1,7 +1,7 @@
 \contentsline {chapter}{Abstract}{ii}
 \contentsline {chapter}{Acknowledgments}{iii}
-\contentsline {chapter}{List of Tables}{vi}
-\contentsline {chapter}{List of Figures}{vii}
+\contentsline {chapter}{List of Tables}{v}
+\contentsline {chapter}{List of Figures}{vi}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Background Information}{1}
 \contentsline {section}{\numberline {1.2}Related Work}{1}
@@ -11,17 +11,8 @@
 \contentsline {section}{\numberline {3.2}Vapor Pressure}{3}
 \contentsline {section}{\numberline {3.3}Error Analysis}{3}
 \contentsline {chapter}{\numberline {4}Conclusion}{4}
-\contentsline {chapter}{\numberline {5}(}{5}
-\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ A\hfill } The English Language and Other Confusing Things}{6}
-\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ B\hfill } Procedures and Deadlines}{7}
-\contentsline {paragraph}{Deadlines}{7}
-\contentsline {paragraph}{Oral Examination}{7}
-\contentsline {paragraph}{Final Copies}{7}
-\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ C\hfill } Thesis Format Checklist}{10}
-\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ D\hfill } Special Notes for \LaTeX {} Users, Including a \\ \hbox to 1.0in{}Demonstration of Wrapping Appendix Titles}{11}
-\contentsline {section}{\numberline {D.1}Front Matter}{11}
-\contentsline {section}{\numberline {D.2}Table of Contents and Bibliography}{12}
-\contentsline {section}{\numberline {D.3}Captions}{12}
-\contentsline {section}{\numberline {D.4}Widows and Page Breaks}{13}
-\contentsline {chapter}{References}{14}
-\contentsline {chapter}{Vita}{16}
+\contentsline {chapter}{\numberline {5}Future Work}{5}
+\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ A\hfill } Camera Information}{6}
+\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ B\hfill } Weather Data}{7}
+\contentsline {chapter}{References}{8}
+\contentsline {chapter}{Vita}{9}

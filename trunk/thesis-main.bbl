@@ -1,44 +1,4 @@
-\begin{thebibliography}{10}
-
-\bibitem{Akazawa}
-S.~Akazawa.
-\newblock The scope of the {J}apanese information industry in the 1980s.
-\newblock In K.~R. Brown, editor, {\em The challenge of information technology:
-  Proceedings of the forty-first FID (Federation Internationale de
-  Documentation) congress held in Hong Kong 13-16 September 1982}, pages
-  19--22, Amsterdam, New York, and Oxford, 1983. North Holland.
-
-\bibitem{ALA}
-{American Library Association, Young Adult Services Division, Services
-  Statement Development Committee}.
-\newblock Directions for library service to young adults.
-\newblock Chicago, 1978.
-
-\bibitem{Artioli}
-Gilberto Artioli.
-\newblock {\em Structural studies of the water molecules and hydrogen bonding
-  in zeolites}.
-\newblock PhD thesis, University of Chicago, 1985.
-
-\bibitem{Cohen}
-B.~G.~F. Cohen.
-\newblock Human aspects in office automation.
-\newblock Technical Report NTIS, PB84-240738, National Institute for
-  Occupational Safety and Health, Division of Biomedical and Behavioral
-  Science, Cincinnati, 1984.
-
-\bibitem{Greenberger}
-Martin Greenberger, Julius Aronofsky, James~L. McKenney, and William~F. Massy,
-  editors.
-\newblock {\em Networks for research and education: Sharing of computer and
-  information resources nationwide}.
-\newblock MIT Press, Cambridge, 1974.
-
-\bibitem{Jackson}
-Richard Jackson.
-\newblock Running down the up-escalator: Regional inequality in papua new
-  guinea.
-\newblock {\em Australian Geographer}, 14:175--84, May 1979.
+\begin{thebibliography}{1}
 
 \bibitem{957143}
 Dongge Li, Nevenka Dimitrova, Mingkun Li, and Ishwar~K. Sethi.
@@ -51,25 +11,5 @@ S.G. Narasimhan, C.~Wang, and S.K. Nayar.
 \newblock {A}ll the {I}mages of an {O}utdoor {S}cene.
 \newblock In {\em Europian Conference on Computer Vision (ECCV)}, volume III,
   pages 148--162, May 2002.
-
-\bibitem{Strunk}
-William~Jr. Strunk and E.~B. White.
-\newblock {\em The Elements of Style}.
-\newblock MacMillan Publishing Co., New York, 3rd edition, 1979.
-
-\bibitem{Turabian}
-Kate~L. Turabian.
-\newblock {\em A Manual for Writers of Term Papers, Theses, and Dissertations}.
-\newblock University of Chicago Press, Chicago, 5th edition, 1987.
-
-\bibitem{ChicagoManual}
-{University of Chicago Press}.
-\newblock {\em The Chicago Manual of Style}.
-\newblock University of Chicago Press, Chicago, 13th edition, 1982.
-
-\bibitem{DeptAg}
-{U.S. Department of Agriculture}.
-\newblock {\em Will there be enough food? The 1981 yearbook of agriculture}.
-\newblock Government Printing Office, Washington, D.C., 1981.
 
 \end{thebibliography}
