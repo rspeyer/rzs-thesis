@@ -1,22 +1,13 @@
-%
-%
-% Sample  Vita
-% This is done in a list environment.
-%
 % Personal heading
 \begin{center}
 {\large\thesisauthor}
 \end{center}
-%
-% Need to 'fold' long labels
-%
+
 \newcommand{\vitalabel}[1]%
   {\raisebox{0pt}[1ex][0pt]
     {\makebox[\labelwidth][l]%
       {\parbox[t]{\labelwidth}{\hspace{0pt}\textbf{#1}}}}}
-%
-% Here's the list definition
-%
+
 \begin{list}
   {}%                                        nodefault label
   { \renewcommand{\makelabel}{\vitalabel}%   setting labels
@@ -39,4 +30,3 @@
 \end{list}
 \flushright
 \thesismonth\ \thesisyear
-
