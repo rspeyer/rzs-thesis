@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{jacobs07amos}
+Nathan Jacobs, Nathaniel Roman, and Robert Pless.
+\newblock Consistent temporal variations in many outdoor scenes.
+\newblock In {\em IEEE Computer Society Conference on Computer Vision and
+  Pattern Recognition (CVPR 2007)}, Minneapolis, MN, June 2007.
+
 \bibitem{957143}
 Dongge Li, Nevenka Dimitrova, Mingkun Li, and Ishwar~K. Sethi.
 \newblock Multimedia content processing through cross-modal association.
