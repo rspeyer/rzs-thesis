@@ -3,16 +3,17 @@
 \contentsline {chapter}{List of Tables}{v}
 \contentsline {chapter}{List of Figures}{vi}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {1.1}Background Information}{1}
-\contentsline {section}{\numberline {1.2}Related Work}{1}
-\contentsline {chapter}{\numberline {2}Canonical Correlation Analysis (CCA)}{2}
-\contentsline {chapter}{\numberline {3}Results \& Analysis}{3}
-\contentsline {section}{\numberline {3.1}Wind Speed \& Direction}{3}
-\contentsline {section}{\numberline {3.2}Vapor Pressure}{3}
-\contentsline {section}{\numberline {3.3}Error Analysis}{3}
-\contentsline {chapter}{\numberline {4}Conclusion}{4}
-\contentsline {chapter}{\numberline {5}Future Work}{5}
-\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ A\hfill } Camera Information}{6}
-\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ B\hfill } Weather Data}{7}
-\contentsline {chapter}{References}{8}
-\contentsline {chapter}{Vita}{9}
+\contentsline {section}{\numberline {1.1}Related Work}{2}
+\contentsline {section}{\numberline {1.2}Background Information}{2}
+\contentsline {chapter}{\numberline {2}Canonical Correlation Analysis (CCA)}{3}
+\contentsline {section}{\numberline {2.1}Applications}{4}
+\contentsline {chapter}{\numberline {3}Results \& Analysis}{6}
+\contentsline {section}{\numberline {3.1}Wind Speed \& Direction}{6}
+\contentsline {section}{\numberline {3.2}Vapor Pressure}{6}
+\contentsline {section}{\numberline {3.3}Error Analysis}{6}
+\contentsline {chapter}{\numberline {4}Conclusion}{7}
+\contentsline {chapter}{\numberline {5}Future Work}{8}
+\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ A\hfill } Camera Information}{9}
+\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ B\hfill } Weather Data}{10}
+\contentsline {chapter}{References}{11}
+\contentsline {chapter}{Vita}{12}
