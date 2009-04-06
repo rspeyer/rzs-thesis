@@ -1,10 +1,33 @@
 \begin{thebibliography}{1}
 
+\bibitem{bkl97}
+M.~Borga, H.~Knutsson, and T.~Landelius.
+\newblock Learning canonical correlations.
+\newblock In {\em SCIA10}, Lappeenranta, Finland, June 1997. SCIA.
+
+\bibitem{hotelling}
+H.~Hotelling.
+\newblock Relations between two sets of variates.
+\newblock In {\em Biometrika}, volume~28, pages 321--377, 1936.
+
 \bibitem{jacobs07amos}
 Nathan Jacobs, Nathaniel Roman, and Robert Pless.
 \newblock Consistent temporal variations in many outdoor scenes.
 \newblock In {\em IEEE Computer Society Conference on Computer Vision and
   Pattern Recognition (CVPR 2007)}, Minneapolis, MN, June 2007.
+
+\bibitem{jacobs08geoorient}
+Nathan Jacobs, Nathaniel Roman, and Robert Pless.
+\newblock Toward fully automatic geo-location and geo-orientation of static
+  outdoor cameras.
+\newblock In {\em IEEE Workshop on Applications of Computer Vision (WACV
+  2008)}, Copper Mountain, CO, January 2008.
+
+\bibitem{jacobs07geolocate}
+Nathan Jacobs, Scott Satkin, Nathaniel Roman, Richard Speyer, and Robert Pless.
+\newblock Geolocating static cameras.
+\newblock In {\em Proc. IEEE International Conference on Computer Vision
+  (ICCV)}, Rio De Janiero, Brazil, October 2007.
 
 \bibitem{957143}
 Dongge Li, Nevenka Dimitrova, Mingkun Li, and Ishwar~K. Sethi.
@@ -17,5 +40,10 @@ S.G. Narasimhan, C.~Wang, and S.K. Nayar.
 \newblock {A}ll the {I}mages of an {O}utdoor {S}cene.
 \newblock In {\em Europian Conference on Computer Vision (ECCV)}, volume III,
   pages 148--162, May 2002.
+
+\bibitem{noaa}
+National Oceanic and Atmospheric Administration.
+\newblock Historical weather data archives, April 2009.
+\newblock http://data.nssl.noaa.gov/.
 
 \end{thebibliography}
