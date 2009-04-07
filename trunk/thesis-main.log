@@ -1,4 +1,8 @@
+<<<<<<< .mine
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.24)  6 APR 2009 15:26
+=======
 This is pdfeTeX, Version 3.141592-1.21a-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.12.6)  7 APR 2009 11:06
+>>>>>>> .r12
 entering extended mode
 **C:/Documents*and*Settings/Richard*Speyer/My*Documents/Research/Webcam*Signals/Thesis/thesis-main.tex
 (C:/Documents and Settings/Richard Speyer/My Documents/Research/Webcam Signals/Thesis/thesis-main.tex
@@ -242,6 +246,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--24
 
 ]) (thesis-main.aux (thesis-front.aux) (thesis-chapters.aux) (thesis-appendices.aux) (thesis-back.aux)) ) 
 Here is how much of TeX's memory you used:
+<<<<<<< .mine
+ 2165 strings out of 95340
+ 31903 string characters out of 1184155
+ 96802 words of memory out of 1500000
+ 5327 multiletter control sequences out of 110000
+ 10227 words of font info for 36 fonts, out of 1200000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 36i,5n,38p,1581b,252s stack positions out of 5000i,500n,10000p,200000b,5000s
+<C:/Program Files/MiKTeX 2.7/fonts/
+type1/bluesky/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm
+/cmbx12.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi12.pfb><C:/
+Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi8.pfb><C:/Program Files/MiK
+TeX 2.7/fonts/type1/bluesky/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.7/fonts/typ
+e1/bluesky/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsl
+12.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy10.pfb><C:/Progr
+am Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2
+.7/fonts/type1/bluesky/cm/cmti12.pfb>
+Output written on thesis-main.pdf (19 pages, 98483 bytes).
+=======
  1843 strings out of 95515
  24266 string characters out of 1189489
  72420 words of memory out of 1073643
@@ -249,6 +272,7 @@ Here is how much of TeX's memory you used:
  10227 words of font info for 36 fonts, out of 1000000 for 2000
  14 hyphenation exceptions out of 4999
  33i,5n,34p,1584b,234s stack positions out of 5000i,500n,10000p,200000b,32768s
+>>>>>>> .r12
 PDF statistics:
  110 PDF objects out of 300000
  0 named destinations out of 300000
