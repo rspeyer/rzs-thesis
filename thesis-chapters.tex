@@ -2,7 +2,7 @@
 \label{cpt:intro}
 The appearance of a scene can often give us an abundance of information about the scene including time of day, location, and weather. With all of this information available, it is up to us to find ways to automatically extract it from images of the scene to allow us to better understand what is going on at a given location. In this thesis we will attempt to use the information collected by webcams to infer information about environmental signals such as wind speed \& direction and vapor pressure. 
 
-The challenge is that images may vary more due to other causes such as time of day than those which relate to our signals of interest. Thus, we begin by exploring mechanisms for learning features that are invariant to other scene changes. Through the use of correlation techniques such as Canonical Correlation Analysis (CCA), we find that we are able to extract useful information from webcam images which allow us to predict local weather data and as a result gain better understanding of local weather patterns and variations. Furthermore, this allows us to use the abundantly existing webcams all over the country as crude weather sensors instead of depending only on the government weather stations sparsely spread out across the country. 
+The challenge is that images may vary more due to other causes such as time of day than those which relate to our signals of interest. Thus, we begin by exploring mechanisms for learning features that are invariant to other scene changes. Through the use of correlation techniques such as Canonical Correlation Analysis (CCA), we find that we are able to extract useful information from webcam images which allow us to predict local weather data and as a result gain better understanding of local weather patterns and variations and fill in missing weather data entries, which occur quite frequently. Furthermore, this allows us to use the abundantly existing webcams all over the country as crude weather sensors instead of depending only on the government weather stations sparsely spread out across the country. 
 
 This thesis will go through the background information, motivation, and related work in Section \ref{cpt:intro}. It will then discuss the theory and details of the correlation techniques used in Section \ref{cpt:cca}. Section \ref{cpt:results} will begin to show the application and results of the aforementioned methods. It will also show how we further utilize our results to determine the appropriate size of the training set necessary to avoid any inherent bias in the images. We will conclude in Section \ref{cpt:conclusion} and propose future work on this problem in Section \ref{cpt:future}.
 
@@ -45,13 +45,22 @@ This is the key equation that is used to extract the inherent weather data from 
 We consider two weather signals for our driving examples: wind velocity and vapor pressure. These two signals present unique challenges and opportunities. The effect of wind velocity is limited to locations in the scene that are affected by wind, such as flags and vegetation. On the other hand, vapor pressure may affect the scene in a more broad and subtle manner. Choosing two examples with such unique characteristics is a great way to test whether our algorithm is able to handle any variety of weather signals or if it can only handle certain types of measurements.
 
 \section{Wind Speed \& Direction}
-Our first driving example of this method will be using wind velocity. Wind is a variable whose effects are only seen in certain local parts of the image; objects such s building and cars will be unaffected by changes in wind. In order to ensure that we could accurately predict the wind, we chose a camera which contained a flag (Figure \ref{fig:windspeedextremes}).
+Our first driving example of this method will be using wind velocity. Wind is a variable whose effects are only seen in certain local parts of the image; objects such s building and cars will be unaffected by changes in wind. In order to ensure that we could accurately predict the wind, we chose a camera which contained a flag (Figure \ref{fig:windspeedextremes}). 
 \begin{figure}
 	\centering
 		\includegraphics[width=0.70\textwidth]{figures/windspeedextremes.jpg}
 	\caption{Some sample images from camera $\#$194 of the AMOS database located in Decatur, IN. The presence of a flag on top of the school building is key to our ability to predict wind speed and direction.}
 	\label{fig:windspeedextremes}
 \end{figure}
+
+Our CCA projections are trained on 204 images collected between January 1 and February 11, 2009. In order to focus on variations in the scene due to weather, we only use images captured between 10 AM and 2 PM local time. By doing this we can successfully remove most of the variation caused by time of day and the resulting shadows. The wind data is made up of a wind speed and a direction in degrees, which we convert to north/south and east/west components, and was collected from the closest weather station to the camera. After running CCA, we can project matrix $A$ onto our feature vectors $U$ from the PCA analysis of the images to visualize the canonical features extracted by CCA. As we see in Figure \ref{fig:windspeedcomponents1}, CCA clearly identifies the position of the flag as the crucial indicator of wind speed. Furthermore, we can also notice slight variations in the tree positions, which also are affected by wind speed.
+\begin{figure}
+	\centering
+		\includegraphics[width=0.55\textwidth]{figures/windspeedcomponents1.jpg}
+	\caption{The projection of the first basis vector from CCA onto the original image space. It is clear to see that the position of the flag and the trees are the major variations.}
+	\label{fig:windspeedcomponents1}
+\end{figure}
+
 \begin{figure}
 	\centering
 		\includegraphics{figures/windspeedscatter.pdf}
