@@ -1,5 +1,12 @@
 \begin{thebibliography}{1}
 
+\bibitem{barcikowski}
+Robert~S. Barcikowski and James~P. Stevens.
+\newblock A monte carlo study of the stability of canonical correlations,
+  canonical weights and canonical variate-variable correlations.
+\newblock In {\em Multivariate Behavioral Research}, volume 10:3, pages
+  353--364, 1975.
+
 \bibitem{bkl97}
 M.~Borga, H.~Knutsson, and T.~Landelius.
 \newblock Learning canonical correlations.

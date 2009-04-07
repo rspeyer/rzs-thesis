@@ -55,7 +55,9 @@ We consider two weather signals for our driving examples: wind velocity and vapo
 \section{Vapor Pressure}
 
 \section{Error Analysis}
-A standard question that must be asked of any machine learning algorithm is: how large of a training dataset is necessary to build an strong model? A strong model is on that can predict our given weather data both accurately \textit{and} precisely. That is, our predictions from novel data have small error residuals and are not biased in one direction or the other. The combination of accuracy and precision is a strong argument that our model is truly predicting weather data and not some other signal from the image that is similar to the weather. The goal now is to find the minimum number of data samples which we need to build such a model.
+A standard question that must be asked of any machine learning algorithm is: how large of a training dataset is necessary to build an strong model? A strong model is on that can predict our given weather data both accurately \textit{and} precisely. That is, our predictions from novel data have small error residuals and are not biased in one direction or the other. The combination of accuracy and precision is a strong argument that our model is truly predicting weather data and not some other signal from the image that is similar to the weather. The goal now is to find the minimum number of data samples which we need to build such a model. 
+
+Prior work \cite{barcikowski} using Monte Carlo simulations has suggested that CCA requires the size of the training dataset to be between 40 and 60 times the number of variables being used in correlation analysis. While this may be true for general cases, we will argue here that a far smaller amount is required if the samples sufficiently cover the distribution of possible values.
 
 
 \chapter{Conclusion}
