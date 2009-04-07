@@ -45,6 +45,13 @@ This is the key equation that is used to extract the inherent weather data from 
 We consider two weather signals for our driving examples: wind velocity and vapor pressure. These two signals present unique challenges and opportunities. The effect of wind velocity is limited to locations in the scene that are affected by wind, such as flags and vegetation. On the other hand, vapor pressure may affect the scene in a more broad and subtle manner. Choosing two examples with such unique characteristics is a great way to test whether our algorithm is able to handle any variety of weather signals or if it can only handle certain types of measurements.
 
 \section{Wind Speed \& Direction}
+Our first driving example of this method will be using wind velocity. Wind is a variable whose effects are only seen in certain local parts of the image; objects such s building and cars will be unaffected by changes in wind. In order to ensure that we could accurately predict the wind, we chose a camera which contained a flag (Figure \ref{fig:windspeedextremes}).
+\begin{figure}
+	\centering
+		\includegraphics[width=0.70\textwidth]{figures/windspeedextremes.jpg}
+	\caption{Some sample images from camera $\#$194 of the AMOS database located in Decatur, IN. The presence of a flag on top of the school building is key to our ability to predict wind speed and direction.}
+	\label{fig:windspeedextremes}
+\end{figure}
 \begin{figure}
 	\centering
 		\includegraphics{figures/windspeedscatter.pdf}
