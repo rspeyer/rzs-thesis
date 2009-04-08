@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.24)  8 APR 2009 13:14
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.24)  8 APR 2009 14:16
 entering extended mode
 **C:/Documents*and*Settings/gpu/Desktop/Richard*Speyer/Webcam*Signals/papers/th
 esis/thesis-main.tex
@@ -227,22 +227,21 @@ File: figures/windspeedtimeseriesimages.jpg Graphic file (type jpg)
 <figures/windspeedcorr.jpg, id=60, 641.39626pt x 454.69875pt>
 File: figures/windspeedcorr.jpg Graphic file (type jpg)
 
-<use figures/windspeedcorr.jpg>
-<figures/windspeedscatter.pdf, id=61, 216.81pt x 216.81pt>
+<use figures/windspeedcorr.jpg> [7 <figures/windspeedextremes.jpg>]
+<figures/windspeedscatter.pdf, id=65, 216.81pt x 216.81pt>
 File: figures/windspeedscatter.pdf Graphic file (type pdf)
 
 <use figures/windspeedscatter.pdf>
 
 pdfTeX warning:  (file figures/decaturin.pdf): PDF inclusion: found PDF version
  <1.5>, but at most version <1.4> allowed
-<figures/decaturin.pdf, id=62, 794.97pt x 614.295pt>
+<figures/decaturin.pdf, id=66, 794.97pt x 614.295pt>
 File: figures/decaturin.pdf Graphic file (type pdf)
 
-<use figures/decaturin.pdf> [7 <figures/windspeedextremes.jpg>] [8 <figures/win
-dspeedcomponents1.jpg> <figures/windspeedcomponents2.jpg>] [9 <figures/windspee
-dtimeseries.pdf> <figures/windspeedtimeseriesimages.jpg> <figures/windspeedcorr
-.jpg>] [10 <figures/windspeedscatter.pdf> <figures/decaturin.pdf, page is rotat
-ed 90 degrees>] [11]
+<use figures/decaturin.pdf> [8 <figures/windspeedcomponents1.jpg> <figures/wind
+speedcomponents2.jpg>] [9 <figures/windspeedtimeseries.pdf> <figures/windspeedt
+imeseriesimages.jpg> <figures/windspeedcorr.jpg>] [10 <figures/windspeedscatter
+.pdf> <figures/decaturin.pdf, page is rotated 90 degrees>] [11]
 Chapter 4.
 [12
 
@@ -281,10 +280,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--24
 ]) (thesis-main.aux (thesis-front.aux) (thesis-chapters.aux)
 (thesis-appendices.aux) (thesis-back.aux)) ) 
 Here is how much of TeX's memory you used:
- 2371 strings out of 95340
- 35487 string characters out of 1184155
+ 2373 strings out of 95340
+ 35518 string characters out of 1184155
  97802 words of memory out of 1500000
- 5519 multiletter control sequences out of 110000
+ 5521 multiletter control sequences out of 110000
  10227 words of font info for 36 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  36i,7n,38p,1581b,269s stack positions out of 5000i,500n,10000p,200000b,5000s
@@ -298,7 +297,7 @@ e1/bluesky/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr
 m Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
 .7/fonts/type1/bluesky/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bl
 uesky/cm/cmti12.pfb>
-Output written on thesis-main.pdf (25 pages, 1197515 bytes).
+Output written on thesis-main.pdf (25 pages, 1199822 bytes).
 PDF statistics:
  969 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
