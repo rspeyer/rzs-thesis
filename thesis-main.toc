@@ -16,4 +16,4 @@
 \contentsline {chapter}{\hbox to \appendixhspace {Appendix\ A\hfill } Camera Information}{12}
 \contentsline {chapter}{\hbox to \appendixhspace {Appendix\ B\hfill } Weather Data}{13}
 \contentsline {chapter}{References}{14}
-\contentsline {chapter}{Vita}{15}
+\contentsline {chapter}{Vita}{16}

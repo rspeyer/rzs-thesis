@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{barcikowski}
 Robert~S. Barcikowski and James~P. Stevens.
@@ -16,6 +16,13 @@ M.~Borga, H.~Knutsson, and T.~Landelius.
 H.~Hotelling.
 \newblock Relations between two sets of variates.
 \newblock In {\em Biometrika}, volume~28, pages 321--377, 1936.
+
+\bibitem{iv09}
+Nathan Jacobs, Walker Burgin, Richard Speyer, David Ross, and Robert Pless.
+\newblock Adventures in archiving and using three years of webcam images.
+\newblock In {\em IEEE Workshop on Internet Vision (CVPR 2009)}, Miami, FL,
+  June 2009.
+\newblock (to appear).
 
 \bibitem{jacobs07amos}
 Nathan Jacobs, Nathaniel Roman, and Robert Pless.
