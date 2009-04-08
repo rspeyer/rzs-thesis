@@ -70,7 +70,7 @@ Based on this data, we would expect the two dimensions of the CCA projection mat
 		\caption{Figure \ref{fig:windspeedcomponents1} shows the projection of the first basis vector from CCA onto the original image space. It is clear to see that the position of the flag and the trees are the major variations. Figure \ref{fig:windspeedcomponents2} shows the projection of the second basis vector and is far less accurate than the first.}
 \end{figure}
 
-We can now use equation \ref{eq:predict} to infer the magnitude of the wind velocity on 102 images collected between February 11 and March 17, 2009 which were not used in the training of the CCA. Figure \ref{fig:windpred} shows a plot of the ground truth values for wind speed as well as the predicted values using CCA. The associated images below the plot correspond to the filled markers and clearly indicate that our wind speed predictions not only agree with the ground truth values but also directly correlate with the direction of the flag. These results, along with the scatter plot in Figure \ref{fig:windspeedcorr} strongly support our belief that wind speed along a given vector can be predicted based on the position of the flag.
+We can now use equation \ref{eq:predict} to infer the magnitude of the wind velocity on 102 images collected between February 11 and March 17, 2009 which were not used in the training of the CCA. Figure \ref{fig:windpred} shows a plot of the ground truth values for wind speed as well as the predicted values using CCA. The associated images below the plot correspond to the filled markers and clearly indicate that our wind speed predictions not only agree with the ground truth values but also directly correlate with the direction of the flag. These results, along with the scatter plot in Figure \ref{fig:windspeedcorr} strongly supports our belief that wind speed along a given vector can be predicted based on the position of the flag  $(r=0.61759)$.
 \begin{figure}
 	\centering
 	\subfigure[]{
@@ -81,13 +81,13 @@ We can now use equation \ref{eq:predict} to infer the magnitude of the wind velo
 		\includegraphics[width=0.90\textwidth]{figures/windspeedtimeseriesimages.jpg}
 		\label{fig:windspeedtimeseriesimages}
 	}
-	\caption{Predicted wind speed values and corresponding ground truth values in meters/secondis shown in Figure \ref{fig:windspeedtimeseries}. Each image in Figure \ref{fig:windspeedtimeseriesimages} is associated with one of the filled markers in the plot above.}
+	\caption{Predicted wind speed values and corresponding ground truth values in meters/seconds shown in Figure \ref{fig:windspeedtimeseries}. Each image in Figure \ref{fig:windspeedtimeseriesimages} is associated with one of the filled markers in the plot above.}
 	\label{fig:windpred}
 \end{figure}
 \begin{figure}
 	\centering
 		\includegraphics[width=0.60\textwidth]{figures/windspeedcorr.jpg}
-	\caption{Scatter plot of predicted wind speed values vs. actual wind speed values. (correlation coefficient = 0.61759)}
+	\caption{Scatter plot of predicted wind speed values vs. actual wind speed values. $(r=0.61759)$}
 	\label{fig:windspeedcorr}
 \end{figure}
 
@@ -107,6 +107,61 @@ Although we are unable to predict both components of the wind speed, there is st
 \end{figure}
 
 \section{Vapor Pressure}
+The second example will consider the weather signal of vapor pressure, which is the contribution of water vapor to the overall atmospheric pressure and is measured in millibars. We note that since this is a 1-dimensional signal, unlike wind velocity, running CCA is essentially equivalent to linear regression. We chose a camera containing a distant skyline of buildings as well as a view of the sky and horizon (Figure \ref{fig:vaporextremes}). Our hypothesis is that as vapor pressure increases, the overall clarity of the distant skyline will decrease. The primary challenge with vapor pressure as opposed to wind speed is that it is a signal which effects the entire scene as opposed to a localized area, and is not quite as easy to comprehend visually.
+
+The CCA projections for this example were trained on 198 images captured from January 1 to February 19, 2009. Once again, we only consider images between 10 AM and 2 PM as a way to ignore variations due to time of day.
+\begin{figure}
+	\centering
+		\includegraphics[width=0.60\textwidth]{figures/vaporextremes.jpg}
+	\caption{Some sample images from camera $\#$619 of the AMOS database located in Houston, TX. We focus on the visibility of the distant skyline of buildings as well as the presence of clouds to help us predict vapor pressure.}
+	\label{fig:vaporextremes}
+\end{figure}
+
+Unfortunately, when we run the algorithm exactly as described above, we get poor results that do not correlate very strongly with what we expect to change with vapor pressure. As we see in Figure \ref{fig:vaporcomponents1-nongrad}, the reprojection of the single dimension of CCA does not yield a very convincing image. It appears that the CCA projection has identified the position of the sun against the buildings as one of the important factors, which does not have anything to do with vapor pressure. Despite CCA identifying this seemingly unrelated signal, we get a decent correlation $(r=0.59968)$ between actual and predicted values, as seen in Figure \ref{fig:vaporcorrb}. In order to improve our predictions and identify a relevant feature in the image, we replace the original images with their gradient magnitude images, which are computed as follows:
+\begin{equation}\label{eq:grad}I_g=\sqrt{\frac{dI}{dx}^2 + \frac{dI}{dy}^2}\end{equation}
+The gradient images will tend to focus on edges and other major changes in the images. The projection of the CCA basis we find when using these gradient images can be found in Figure \ref{fig:vaporcomponents1} and, as we can see, clearly focuses on the visibility of the edges of the buildings, which is what we hypothesized would change with vapor pressure. Additionally, we get a stronger correlation between the actual and predicted values when using the gradient image $(r=0.73684)$.
+\begin{figure}
+	\centering
+	\subfigure[]{
+		\includegraphics[width=0.45\textwidth]{figures/vaporcomponents1-nongrad.jpg}
+		\label{fig:vaporcomponents1-nongrad}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.45\textwidth]{figures/vaporcomponents1.jpg}
+		\label{fig:vaporcomponents1}
+	}
+	\caption{The projections of the CCA basis vector computed with the regular and gradient images, respectively. Figure \ref{fig:vaporcomponents1-nongrad} does not identify a feature which actually correlates strongly with vapor pressure. However, when using the gradient image instead in Figure \ref{fig:vaporcomponents1} we find that the CCA basis clearly identifies the visibility of the skyline as an indicator of vapor pressure, which agrees with our hypothesis.}
+	\label{fig:vaporcomponents}
+\end{figure}
+\begin{figure}
+	\centering
+	\subfigure[]{
+		\includegraphics[width=0.45\textwidth]{figures/vaporcorr-nongrad.jpg}
+		\label{fig:vaporcorrb}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.45\textwidth]{figures/vaporcorr.jpg}
+		\label{fig:vaporcorra}
+	}
+	\caption{Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images, respectively. While the correlation with the regular images (Figure \ref{fig:vaporcorrb}, $r=0.59968$) is not poor, there is a noticeable improvement when using the gradient images (Figure \ref{fig:vaporcorra}, $r=0.73684$).}
+	\label{fig:vaporcorr}
+\end{figure}
+
+Further analysis of our results indicate that we are correctly predicting vapor pressure and not some other signal which happens to correlate strongly with vapor pressure. Figure \ref{fig:vaporpred} shows the time series predicted vapor pressure data along with the ground truth values. We see that high vapor pressure measurements clearly indicate more cloudy days, which is exactly what we expect. This example also gives us a chance to identify one failure mode of our algorithm. On March 12, there was such a heavy fog that it obscured the entire scene, making it impossible to accurately predict vapor pressure. This is an unavoidable failure mode as the algorithms depend on the appearance of the image and nothing else to predict the weather. Despite this failure mode, it is clear that our algorithm is able to successfully predict vapor pressure given a reasonable image of the scene.
+\begin{figure}
+	\centering
+	\subfigure[]{
+		\includegraphics[width=0.60\textwidth]{figures/vaportimeseries.pdf}
+		\label{fig:vaportimeseries}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.90\textwidth]{figures/vaportimeseriesimages.jpg}
+		\label{fig:vaportimeseriesimages}
+	}
+	\caption{Predicted wind speed values and corresponding ground truth values in millibars shown in Figure \ref{fig:vaportimeseries}. Each image in Figure \ref{fig:vaportimeseriesimages} is associated with one of the filled markers in the plot above. The poor predictions on March 12 are due to heavy fog which obscured the entire scene and left water on the optics.}
+	\label{fig:vaporpred}
+\end{figure}
+
 
 \section{Error Analysis}
 A standard question that must be asked of any machine learning algorithm is: how large of a training dataset is necessary to build an strong model? A strong model is on that can predict our given weather data both accurately \textit{and} precisely. That is, our predictions from novel data have small error residuals and are not biased in one direction or the other. The combination of accuracy and precision is a strong argument that our model is truly predicting weather data and not some other signal from the image that is similar to the weather. The goal now is to find the minimum number of data samples which we need to build such a model. 
