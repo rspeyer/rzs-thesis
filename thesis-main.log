@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.12.6)  9 APR 2009 13:52
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.12.6)  9 APR 2009 14:19
 entering extended mode
 **C:/Documents*and*Settings/Richard*Speyer/My*Documents/Research/Webcam*Signals/Thesis/thesis-main.tex
 (C:/Documents and Settings/Richard Speyer/My Documents/Research/Webcam Signals/Thesis/thesis-main.tex
@@ -266,7 +266,22 @@ File: figures/vaportimeseries.pdf Graphic file (type pdf)
 File: figures/vaportimeseriesimages.jpg Graphic file (type jpg)
  <use figures/vaportimeseriesimages.jpg> [13 <figures/vaporcomponents1-nongrad.jpg> <figures/vaporcomponents1.jpg>] [14 
 <figures/vaporcorr-nongrad.jpg> <figures/vaporcorr.jpg>]
-[15 <figures/vaportimeseries.pdf> <figures/vaportimeseriesimages.jpg>] [16]
+[15 <figures/vaportimeseries.pdf> <figures/vaportimeseriesimages.jpg>]
+
+! LaTeX Error: File `' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 	\includegraphics{}
+                         
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[16]
 Chapter 4.
 [17
 
@@ -309,10 +324,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
 ]) (thesis-main.aux (thesis-front.aux) (thesis-chapters.aux) (thesis-appendices.aux) (thesis-back.aux)) ) 
 Here is how much of TeX's memory you used:
- 2133 strings out of 95515
- 29373 string characters out of 1189489
- 75083 words of memory out of 1075794
- 5008 multiletter control sequences out of 60000
+ 2142 strings out of 95515
+ 29410 string characters out of 1189489
+ 75095 words of memory out of 1075806
+ 5009 multiletter control sequences out of 60000
  10227 words of font info for 36 fonts, out of 1000000 for 2000
  14 hyphenation exceptions out of 4999
  33i,7n,34p,1279b,244s stack positions out of 5000i,500n,10000p,200000b,32768s
@@ -326,4 +341,4 @@ texmf\fonts\type1\bluesky\cm\cmr8.pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy8.pfb
 pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmmi12.pfb><C:\texmf\fonts\type1\bluesk
 y\cm\cmsl12.pfb><C:\texmf\fonts\type1\bluesky\cm\cmbx12.pfb><C:\texmf\fonts\type1\bluesky\cm\cmti12.pfb><C:\texmf\fonts\
 type1\bluesky\cm\cmr12.pfb>
-Output written on thesis-main.pdf (30 pages, 1588893 bytes).
+Output written on thesis-main.pdf (30 pages, 1589879 bytes).

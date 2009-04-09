@@ -171,10 +171,21 @@ A standard question that must be asked of any machine learning algorithm is: how
 
 % Prior work \cite{barcikowski} using Monte Carlo simulations has suggested that CCA requires the size of the training dataset to be between 40 and 60 times the number of variables being used in correlation analysis. While this may be true for general cases, we will argue here that a far smaller amount is required if the samples sufficiently cover the distribution of possible values.
 
-\textbf{ADD CHARTS, SIZE ANALYSIS, ETC}
+Recall the wind velocity examples presented in Section \ref{cpt:results}. We used 204 images to train the CCA projections and tested the results on 102 images. We will now analyze the performance of our algorithms on training sets of various sizes. The images will be selected in a contiguous block of days and will still be limited to those collected between 10 AM and 2 PM. As is seen in Figure \ref{fig:windcorrcompare}, we see that the rate at which the correlation coefficient $r$ improves stops changing drastically around 140 images.
+
+\begin{figure}
+	\centering
+	\includegraphics{}
+	\caption{}
+	\label{fig:windcorrcompare}
+\end{figure}
 
 \chapter{Conclusion}
 \label{cpt:conclusion}
 
+
 \chapter{Future Work}
 \label{cpt:future}
+One of the things which makes the AMOS dataset so special and unique is the extremely large number of cameras which is contains. However, only a very few of them are being taken advantage of in this thesis. The algorithm presented in this thesis has been shown to behave well on cameras whose scenes are very different and weather signals that vary as well.
+
+The goal of any future work on this subject should be to further automate the process of finding weather stations close to AMOS cameras, downloading the available weather data, and constantly running, and updating, CCA to predict a variety of weather signals on many cameras. This is very valuable work as it will allow us to analyze local weather patterns across multiple cameras and to infer the weather at other cameras using its location and the locations of other cameras around it. This will allow us to make weather predictions at locations that do not necessarily have a weather station within a reasonable vicinity. 
