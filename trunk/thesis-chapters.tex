@@ -34,9 +34,11 @@ We will now focus on the application of CCA to predicting time-varying weather s
 	\label{fig:imagedimensions}
 \end{figure}
 
-Once our datasets are properly aligned, we turn our attention to the images. Figure \ref{fig:imagedimensions} shows us that the most common size image from a webcam in the AMOS dataset is $320\times 240$ pixels, which means that we can express $n$ image as a $n\times 76800$ matrix. This is clearly a very costly and inefficient way to store image data, especially when we are looking to run CCA with a few hundred images. In order to reduce the storage size for each image, and as a result accelerate the runtime of our algorithms, we will run Principal Component Analysis (PCA) on the images as a way to extract the $k$ most important features from the images and then express each image as a linear combination of these features (we will use $k$=10). PCA will extract significant scene variations from the set of input images which maximize the covariance of the dataset. We will then look to use these coefficients as input to CCA. PCA will take as input a set of images $I$ and will return three matrices $U\in \mathbf{R}^{m\times k}$, $S\in \mathbf{R}^{k\times k}$, and $V\in \mathbf{R}^{k\times n}$ where $m$ is the length of a single image when expressed as a vector. $U$ contains the $k$ feature vectors, $S$ is a diagonal matrix, and $V$ contains the coefficients of each of the $k$ feature vectors for each of the $n$ images. We can thus create reconstructions of the images by multiplying $U$, $S$, and $V$ back together.
+Once our datasets are properly aligned, we turn our attention to the images. Figure \ref{fig:imagedimensions} shows us that the most common size image from a webcam in the AMOS dataset is $320\times 240$ pixels, which means that we can express $n$ image as a $n\times 76800$ matrix. This is clearly a very costly and inefficient way to store image data, especially when we are looking to run CCA with a few hundred images. In order to reduce the storage size for each image, and as a result accelerate the runtime of our algorithms, we will run Principal Component Analysis (PCA) on the images as a way to find the $k$ most important features from the images and then express each image as a linear combination of these features (we will use $k$=10). 
 
-\textbf{MORE PCA MATH}
+PCA will take as input a set of images $I$ and will return three matrices $U\in \mathbf{R}^{m\times k}$, $S\in \mathbf{R}^{k\times k}$, and $V\in \mathbf{R}^{k\times n}$ where $m$ is the length of a single image when expressed as a vector. $U$ contains the $k$ orthogonal feature vectors, $S$ is a diagonal matrix where the elements represent the relative importance of each of the $k$ features, and $V$ contains the coefficients of each of the $k$ feature vectors for each of the $n$ images ($v_i$ contains the coefficients for the $i$th image). We can thus create reconstructions of the images by multiplying $U$, $S$, and $V$ back together. In mathematical terms, PCA attempts to find $U$, which is made up of $k$ orthogonal feature vectors such that we minimize:
+\begin{equation}\sum_{i=1}^{n}{\left(I_i - USv_i\right)^2}\label{eq:pca}\end{equation}
+PCA will extract significant scene variations from the set of input images which, when use to reconstruct the original images, will minimize the reconstruction error. We now have a way to express each image as a $1\times k$ vector, which is significantly smaller than the original image and contains the most important variations. This will be part of our input into CCA.
 
 The PCA coefficients for each image stored in $V$ and our corresponding weather data $W \in \mathbf{R}^{y\times n}$ will be our input matrices for CCA. After running CCA, we will have projection matrices $A$ and $B$. We can now use these to predict weather data from new images which were not included in the input for CCA. Given a new image $i$, we begin by obtaining the $k$ PCA coefficients by projecting the image onto our existing basis vectors stored in $U$. We can now take those coefficients in a vector $\mathbf{v}$ and use them to predict the associated weather values $\mathbf{w}$ as follows:
 \begin{equation}\label{eq:predict}\mathbf{w}=A\mathbf{v}B^{-1}\end{equation}
@@ -77,7 +79,7 @@ We can now use equation \ref{eq:predict} to infer the magnitude of the wind velo
 		\includegraphics[width=0.60\textwidth]{figures/windspeedtimeseries.pdf}
 		\label{fig:windspeedtimeseries}
 	}
-	\subfigure[	]{
+	\subfigure[]{
 		\includegraphics[width=0.90\textwidth]{figures/windspeedtimeseriesimages.jpg}
 		\label{fig:windspeedtimeseriesimages}
 	}
@@ -99,7 +101,7 @@ Although we are unable to predict both components of the wind speed, there is st
 		\label{fig:windspeedscatter}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.45\textwidth]{figures/decaturin.pdf}
+		\includegraphics[width=0.45\textwidth]{figures/decaturin.jpg}
 		\label{fig:decaturin}
 	}
 	\caption{Further analysis of the wind speed predictions provides a way for us to predict the axis along which the flag is blowing. In Figure \ref{fig:windspeedscatter} the size and color of each marker is determined by the predicted wind speed and the location of each marker is determined by the north/south and east/west components of the actual wind speed at the same time. The dashed red line is the normal to the projection axis determined by running linear regression between the predict and actual values. Figure \ref{fig:decaturin} shows this axis overlaid on a Google Maps image with the field of view crudely estimated by hand.}
@@ -166,7 +168,7 @@ Further analysis of our results indicate that we are correctly predicting vapor 
 \section{Error Analysis}
 A standard question that must be asked of any machine learning algorithm is: how large of a training dataset is necessary to build an strong model? A strong model is on that can predict our given weather data both accurately \textit{and} precisely. That is, our predictions from novel data have small error residuals and are not biased in one direction or the other. The combination of accuracy and precision is a strong argument that our model is truly predicting weather data and not some other signal from the image that is similar to the weather. The goal now is to find the minimum number of data samples which we need to build such a model. 
 
-Prior work \cite{barcikowski} using Monte Carlo simulations has suggested that CCA requires the size of the training dataset to be between 40 and 60 times the number of variables being used in correlation analysis. While this may be true for general cases, we will argue here that a far smaller amount is required if the samples sufficiently cover the distribution of possible values.
+% Prior work \cite{barcikowski} using Monte Carlo simulations has suggested that CCA requires the size of the training dataset to be between 40 and 60 times the number of variables being used in correlation analysis. While this may be true for general cases, we will argue here that a far smaller amount is required if the samples sufficiently cover the distribution of possible values.
 
 \textbf{ADD CHARTS, SIZE ANALYSIS, ETC}
 

@@ -13,83 +13,82 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{cpt:cca}{{2}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces The distribution of image sizes, measured in pixels. The circles are centered at the width and height of the image and their sizes are proportional to the number of webcams which output images of that size in the AMOS dataset.\relax }}{4}}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces The distribution of image sizes, measured in pixels. The circles are centered at the width and height of the image and their sizes are proportional to the number of webcams which output images of that size in the AMOS dataset.}}{4}}
 \newlabel{fig:imagedimensions}{{2.1}{4}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Applications}{4}}
-\newlabel{eq:predict}{{2.1}{5}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Results \& Analysis}{6}}
+\newlabel{eq:pca}{{2.1}{5}}
+\newlabel{eq:predict}{{2.2}{5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Results \& Analysis}{7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{cpt:results}{{3}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Wind Speed \& Direction}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Some sample images from camera $\#$194 of the AMOS database located in Decatur, IN. The presence of a flag on top of the school building is key to our ability to predict wind speed and direction.\relax }}{7}}
-\newlabel{fig:windspeedextremes}{{3.1}{7}}
-\newlabel{fig:windspeedcomponents1}{{3.2(a)}{8}}
-\newlabel{sub@fig:windspeedcomponents1}{{(a)}{8}}
-\newlabel{fig:windspeedcomponents2}{{3.2(b)}{8}}
-\newlabel{sub@fig:windspeedcomponents2}{{(b)}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Figure 3.2(a)\hbox {} shows the projection of the first basis vector from CCA onto the original image space. It is clear to see that the position of the flag and the trees are the major variations. Figure 3.2(b)\hbox {} shows the projection of the second basis vector and is far less accurate than the first.\relax }}{8}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{8}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Vapor Pressure}{8}}
-\newlabel{fig:windspeedtimeseries}{{3.3(a)}{9}}
-\newlabel{sub@fig:windspeedtimeseries}{{(a)}{9}}
-\newlabel{fig:windspeedtimeseriesimages}{{3.3(b)}{9}}
-\newlabel{sub@fig:windspeedtimeseriesimages}{{(b)}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Predicted wind speed values and corresponding ground truth values in meters/seconds shown in Figure 3.3(a)\hbox {}. Each image in Figure 3.3(b)\hbox {} is associated with one of the filled markers in the plot above.\relax }}{9}}
+\newlabel{cpt:results}{{3}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Wind Speed \& Direction}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Some sample images from camera $\#$194 of the AMOS database located in Decatur, IN. The presence of a flag on top of the school building is key to our ability to predict wind speed and direction.}}{8}}
+\newlabel{fig:windspeedextremes}{{3.1}{8}}
+\newlabel{fig:windspeedcomponents1}{{3.2(a)}{9}}
+\newlabel{sub@fig:windspeedcomponents1}{{(a)}{9}}
+\newlabel{fig:windspeedcomponents2}{{3.2(b)}{9}}
+\newlabel{sub@fig:windspeedcomponents2}{{(b)}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Figure 3.2(a)\hbox {} shows the projection of the first basis vector from CCA onto the original image space. It is clear to see that the position of the flag and the trees are the major variations. Figure 3.2(b)\hbox {} shows the projection of the second basis vector and is far less accurate than the first.}}{9}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{9}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces { }}}{9}}
-\newlabel{fig:windpred}{{3.3}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Scatter plot of predicted wind speed values vs. actual wind speed values. $(r=0.61759)$\relax }}{9}}
-\newlabel{fig:windspeedcorr}{{3.4}{9}}
-\newlabel{fig:windspeedscatter}{{3.5(a)}{10}}
-\newlabel{sub@fig:windspeedscatter}{{(a)}{10}}
-\newlabel{fig:decaturin}{{3.5(b)}{10}}
-\newlabel{sub@fig:decaturin}{{(b)}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Further analysis of the wind speed predictions provides a way for us to predict the axis along which the flag is blowing. In Figure 3.5(a)\hbox {} the size and color of each marker is determined by the predicted wind speed and the location of each marker is determined by the north/south and east/west components of the actual wind speed at the same time. The dashed red line is the normal to the projection axis determined by running linear regression between the predict and actual values. Figure 3.5(b)\hbox {} shows this axis overlaid on a Google Maps image with the field of view crudely estimated by hand.\relax }}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Vapor Pressure}{9}}
+\newlabel{fig:windspeedtimeseries}{{3.3(a)}{10}}
+\newlabel{sub@fig:windspeedtimeseries}{{(a)}{10}}
+\newlabel{fig:windspeedtimeseriesimages}{{3.3(b)}{10}}
+\newlabel{sub@fig:windspeedtimeseriesimages}{{(b)}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Predicted wind speed values and corresponding ground truth values in meters/seconds shown in Figure 3.3(a)\hbox {}. Each image in Figure 3.3(b)\hbox {} is associated with one of the filled markers in the plot above.}}{10}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{10}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{10}}
-\newlabel{fig:winddirpred}{{3.5}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Some sample images from camera $\#$619 of the AMOS database located in Houston, TX. We focus on the visibility of the distant skyline of buildings as well as the presence of clouds to help us predict vapor pressure.\relax }}{11}}
-\newlabel{fig:vaporextremes}{{3.6}{11}}
-\newlabel{fig:vaporcomponents1-nongrad}{{3.7(a)}{12}}
-\newlabel{sub@fig:vaporcomponents1-nongrad}{{(a)}{12}}
-\newlabel{fig:vaporcomponents1}{{3.7(b)}{12}}
-\newlabel{sub@fig:vaporcomponents1}{{(b)}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The projections of the CCA basis vector computed with the regular and gradient images, respectively. Figure 3.7(a)\hbox {} does not identify a feature which actually correlates strongly with vapor pressure. However, when using the gradient image instead in Figure 3.7(b)\hbox {} we find that the CCA basis clearly identifies the visibility of the skyline as an indicator of vapor pressure, which agrees with our hypothesis.\relax }}{12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{12}}
-\newlabel{fig:vaporcomponents}{{3.7}{12}}
-\newlabel{eq:grad}{{3.1}{12}}
-\citation{barcikowski}
-\newlabel{fig:vaporcorrb}{{3.8(a)}{13}}
-\newlabel{sub@fig:vaporcorrb}{{(a)}{13}}
-\newlabel{fig:vaporcorra}{{3.8(b)}{13}}
-\newlabel{sub@fig:vaporcorra}{{(b)}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images, respectively. While the correlation with the regular images (Figure 3.8(a)\hbox {}, $r=0.59968$) is not poor, there is a noticeable improvement when using the gradient images (Figure 3.8(b)\hbox {}, $r=0.73684$).\relax }}{13}}
+\newlabel{fig:windpred}{{3.3}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Scatter plot of predicted wind speed values vs. actual wind speed values. $(r=0.61759)$}}{10}}
+\newlabel{fig:windspeedcorr}{{3.4}{10}}
+\newlabel{fig:windspeedscatter}{{3.5(a)}{11}}
+\newlabel{sub@fig:windspeedscatter}{{(a)}{11}}
+\newlabel{fig:decaturin}{{3.5(b)}{11}}
+\newlabel{sub@fig:decaturin}{{(b)}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Further analysis of the wind speed predictions provides a way for us to predict the axis along which the flag is blowing. In Figure 3.5(a)\hbox {} the size and color of each marker is determined by the predicted wind speed and the location of each marker is determined by the north/south and east/west components of the actual wind speed at the same time. The dashed red line is the normal to the projection axis determined by running linear regression between the predict and actual values. Figure 3.5(b)\hbox {} shows this axis overlaid on a Google Maps image with the field of view crudely estimated by hand.}}{11}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{11}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{11}}
+\newlabel{fig:winddirpred}{{3.5}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Some sample images from camera $\#$619 of the AMOS database located in Houston, TX. We focus on the visibility of the distant skyline of buildings as well as the presence of clouds to help us predict vapor pressure.}}{12}}
+\newlabel{fig:vaporextremes}{{3.6}{12}}
+\newlabel{fig:vaporcomponents1-nongrad}{{3.7(a)}{13}}
+\newlabel{sub@fig:vaporcomponents1-nongrad}{{(a)}{13}}
+\newlabel{fig:vaporcomponents1}{{3.7(b)}{13}}
+\newlabel{sub@fig:vaporcomponents1}{{(b)}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The projections of the CCA basis vector computed with the regular and gradient images, respectively. Figure 3.7(a)\hbox {} does not identify a feature which actually correlates strongly with vapor pressure. However, when using the gradient image instead in Figure 3.7(b)\hbox {} we find that the CCA basis clearly identifies the visibility of the skyline as an indicator of vapor pressure, which agrees with our hypothesis.}}{13}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{13}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{13}}
-\newlabel{fig:vaporcorr}{{3.8}{13}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Error Analysis}{13}}
-\newlabel{fig:vaportimeseries}{{3.9(a)}{14}}
-\newlabel{sub@fig:vaportimeseries}{{(a)}{14}}
-\newlabel{fig:vaportimeseriesimages}{{3.9(b)}{14}}
-\newlabel{sub@fig:vaportimeseriesimages}{{(b)}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Predicted wind speed values and corresponding ground truth values in millibars shown in Figure 3.9(a)\hbox {}. Each image in Figure 3.9(b)\hbox {} is associated with one of the filled markers in the plot above. The poor predictions on March 12 are due to heavy fog which obscured the entire scene and left water on the optics.\relax }}{14}}
+\newlabel{fig:vaporcomponents}{{3.7}{13}}
+\newlabel{eq:grad}{{3.1}{13}}
+\newlabel{fig:vaporcorrb}{{3.8(a)}{14}}
+\newlabel{sub@fig:vaporcorrb}{{(a)}{14}}
+\newlabel{fig:vaporcorra}{{3.8(b)}{14}}
+\newlabel{sub@fig:vaporcorra}{{(b)}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images, respectively. While the correlation with the regular images (Figure 3.8(a)\hbox {}, $r=0.59968$) is not poor, there is a noticeable improvement when using the gradient images (Figure 3.8(b)\hbox {}, $r=0.73684$).}}{14}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{14}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{14}}
-\newlabel{fig:vaporpred}{{3.9}{14}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Conclusion}{16}}
+\newlabel{fig:vaporcorr}{{3.8}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Error Analysis}{14}}
+\newlabel{fig:vaportimeseries}{{3.9(a)}{15}}
+\newlabel{sub@fig:vaportimeseries}{{(a)}{15}}
+\newlabel{fig:vaportimeseriesimages}{{3.9(b)}{15}}
+\newlabel{sub@fig:vaportimeseriesimages}{{(b)}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Predicted wind speed values and corresponding ground truth values in millibars shown in Figure 3.9(a)\hbox {}. Each image in Figure 3.9(b)\hbox {} is associated with one of the filled markers in the plot above. The poor predictions on March 12 are due to heavy fog which obscured the entire scene and left water on the optics.}}{15}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{15}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{15}}
+\newlabel{fig:vaporpred}{{3.9}{15}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Conclusion}{17}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{cpt:conclusion}{{4}{16}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Future Work}{17}}
+\newlabel{cpt:conclusion}{{4}{17}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Future Work}{18}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{cpt:future}{{5}{17}}
+\newlabel{cpt:future}{{5}{18}}
 \@setckpt{thesis-chapters}{
-\setcounter{page}{18}
+\setcounter{page}{19}
 \setcounter{equation}{0}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
@@ -106,7 +105,6 @@
 \setcounter{subparagraph}{0}
 \setcounter{figure}{0}
 \setcounter{table}{0}
-\setcounter{ContinuedFloat}{0}
 \setcounter{subfigure}{0}
 \setcounter{lofdepth}{1}
 \setcounter{subtable}{0}
