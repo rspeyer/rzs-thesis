@@ -4,12 +4,14 @@ The appearance of a scene can often provide an abundance of information about th
 
 One of the primary challenges of predicting weather signals from images is that the images may vary more due to other causes such as time of day than those which relate to our signals of interest. Thus, we begin by exploring mechanisms for learning features that are invariant to other scene changes. Through the use of correlation techniques such as Canonical Correlation Analysis (CCA), we find that we are able to extract useful information from webcam images which allow us to predict local weather data and, as a result, gain a better understanding of local weather patterns and variations and fill in missing weather data entries, which occur quite frequently. Furthermore, this allows us to use the abundantly existing webcams all over the country as crude weather sensors instead of depending only on the government weather stations spread out sparsely across the country. 
 
-This thesis will go through the background information, motivation, and related work in Section \ref{cpt:intro}. It will then discuss the theory and details of the correlation techniques used in Section \ref{cpt:cca}. Section \ref{cpt:results} will begin to show the application and results of the aforementioned methods. It will also show how we further utilize our results to determine the appropriate size of the training set necessary to avoid any biases in the images or over training of the predictors. We will conclude in Section \ref{cpt:conclusion} and propose future work on this problem in Section \ref{cpt:future}.
+This thesis will go through the background information, motivation, and related work in Section \ref{cpt:intro}. It will then discuss the theory and details of the correlation techniques used in Section \ref{cpt:cca}. Section \ref{cpt:results} will begin to show the application and results of the aforementioned methods. It will also show how we further utilize our results to determine the appropriate size of the training set necessary to avoid any biases in the images or over training of the predictors. We will conclude  and propose future work on this problem in Section \ref{cpt:conclusion}.
 
 \section{Related Work}
 The work presented in this paper is primarily related to two areas of research in computer vision; here we will present some of the work related to algorithms designed to operate on webcam image sequences as well as the use of CCA and other correlation techniques to extract external signals from time-varying image sequences.
 
-\textbf{TODO}
+Working with large webcam datasets represent many challenges and provide many opportunities for interesting research. Recent work has been seen in understanding all the variations in a given scene over time using a single statically controlled camera. \cite{CAVE_0059}. Larger, more uncontrolled datasets have been used to test geolocation \cite{jacobs07geolocate} and orientation \cite{jacobs08geoorient} algorithms.
+
+CCA is a regression technique which has been used frequently in statistical analysis through the years. It has recently been used as a means to correlating sounds with frames in movies to develop a system to recall movie scenes based on the associated sounds \cite{957143} such as explosions, or crying. The work presented here will look to take CCA and apply it to a large, diverse set of webcams to infer information about the weather.
 
 \section{Background Information}
 The Archive of Many Outdoor Scenes (AMOS) database \cite{jacobs07amos} has been collecting images from 835 webcams every 30 minutes since March 2006 and now contains over 40 million images. The AMOS dataset is unique in providing time-stamped images from many cameras around the world. No other dataset provides the broad range of geographic locations and the long temporal duration that is does. This database is the largest known collection of natural scenes collected from static cameras and as such offers a wealth of data to test our methods against. While there are cameras located across the world, we focus on those located within the continental United States so that ground truth weather data can be collected.
@@ -20,7 +22,9 @@ The weather data is collected from the Historical Weather Data Archives (HWDA) \
 \label{cpt:cca}
 The main correlation technique which we will explore is a method called Canonical Correlation Analysis (CCA) \cite{hotelling}. The goal of CCA is to find two transformation matrices $A$ and $B$ to maximize the correlation between two independent data sets $X \in \mathbf{R}^{x\times n}$ and $Y \in \mathbf{R}^{y\times n}$. In other words, CCA looks to find $A$ and $B$ such that $AX\approx BY$. CCA is a way of finding a linear relationship between two independent, multidimensional variables.
 
-\textbf{MORE, EQUATIONS ETC, EXPLANATION OF MULTIPLE DIMENSIONS}
+The matrices $A$ and $B$ are build column by column. At each step, CCA seeks to find vectors $a$ and $b$, called canonical variables, to maximize the correlation:
+\begin{equation}\label{eq:maxcorrcca}\rho = cor(aX,bY)\end{equation}
+While minimizing the correlation of $a$ and $b$ with all of the canonical variables already found. The vectors are then added to $A$ and $B$ respectively as new rows. This is continued $min(x,y)$ times.
 
 What makes CCA different from other correlation methods is its invariance to affine transformations of the input variables. In other words, CCA will be able to find a linear relationship between two multidimensional variables even if different coordinate systems are used for each variable \cite{bkl97}. This makes CCA a very desirable method for relating image data to environmental signals, which are clearly not measured in the same coordinate system. One very crucial component of CCA is that while the input matrices $X$ and $Y$ can have a varying number of dimensions, they must have \textit{exactly} the same number of samples in order to find a CCA relationship between two multi-variable signals.
 
@@ -30,7 +34,7 @@ We will now focus on the application of CCA to predicting time-varying weather s
 \begin{figure}
 	\centering
 		\includegraphics{figures/imagedimensions.pdf}
-	\caption{The distribution of image sizes, measured in pixels. The circles are centered at the width and height of the image and their sizes are proportional to the number of webcams which output images of that size in the AMOS dataset.}
+	\caption[The distribution of image sizes in AMOS, measured in pixels]{The distribution of image sizes in AMOS, measured in pixels. The circles are centered at the width and height of the image and their sizes are proportional to the number of webcams which output images of that size in the AMOS dataset.}
 	\label{fig:imagedimensions}
 \end{figure}
 
@@ -53,7 +57,7 @@ Wind velocity is a signal whose effects are only seen in certain local parts of 
 \begin{figure}
 	\centering
 		\includegraphics[width=0.60\textwidth]{figures/windspeedextremes.jpg}
-	\caption{Some sample images from camera $\#$194 of the AMOS database located in Decatur, IN. The presence of a flag on top of the school building is key to the ability to predict wind velocity.}
+	\caption[Some sample images from camera $\#$194 of the AMOS database located in Decatur, IN]{Some sample images from camera $\#$194 of the AMOS database located in Decatur, IN. The presence of a flag on top of the school building is key to the ability to predict wind velocity.}
 	\label{fig:windspeedextremes}
 \end{figure}
 
@@ -70,7 +74,7 @@ Based on this data, we would expect the two dimensions of the CCA projection mat
 		\includegraphics[width=0.45\textwidth]{figures/windspeedcomponents2.jpg}
 	\label{fig:windspeedcomponents2}
 	}
-		\caption{Figure \ref{fig:windspeedcomponents1} shows the projection of the first basis vector from CCA onto the original image space. It is clear to see that the position of the flag and the trees are the major variations. Figure \ref{fig:windspeedcomponents2} shows the projection of the second basis vector and is far less accurate than the first.}
+		\caption[CCA basis vectors for wind velocity projected onto the image space]{Figure \ref{fig:windspeedcomponents1} shows the projection of the first basis vector from CCA onto the original image space. It is clear to see that the position of the flag and the trees are the major variations. Figure \ref{fig:windspeedcomponents2} shows the projection of the second basis vector and is far less accurate than the first.}
 \end{figure}
 
 We can now use equation \ref{eq:predict} to infer the magnitude of the wind velocity on 102 images collected between February 11 and March 17, 2009 which were not used in the training of the CCA. Figure \ref{fig:windpred} shows a plot of the ground truth values for wind speed as well as the predicted values using CCA. The associated images below the plot correspond to the filled markers and clearly indicate that the wind speed predictions not only agree with the ground truth values but also directly correlate with the direction of the flag. These results, along with the scatter plot in Figure \ref{fig:windspeedcorr} strongly support our belief that wind speed along a given vector can be predicted based on the position of the flag  $(r=0.61759)$.
@@ -84,13 +88,13 @@ We can now use equation \ref{eq:predict} to infer the magnitude of the wind velo
 		\includegraphics[width=0.90\textwidth]{figures/windspeedtimeseriesimages.jpg}
 		\label{fig:windspeedtimeseriesimages}
 	}
-	\caption{Predicted wind speed values and corresponding ground truth values in meters/seconds shown in Figure \ref{fig:windspeedtimeseries}. Each image in Figure \ref{fig:windspeedtimeseriesimages} is associated with one of the filled markers in the plot above.}
+	\caption[Predicted wind speed values and corresponding ground truth values in meters/seconds]{Predicted wind speed values and corresponding ground truth values in meters/seconds shown in Figure \ref{fig:windspeedtimeseries}. Each image in Figure \ref{fig:windspeedtimeseriesimages} is associated with one of the filled markers in the plot above.}
 	\label{fig:windpred}
 \end{figure}
 \begin{figure}
 	\centering
 		\includegraphics[width=0.60\textwidth]{figures/windspeedcorr.jpg}
-	\caption{Scatter plot of predicted wind speed values vs. actual wind speed values. $(r=0.61759)$}
+	\caption[Scatter plot of predicted wind speed values vs. actual wind speed values]{Scatter plot of predicted wind speed values vs. actual wind speed values. $(r=0.61759)$}
 	\label{fig:windspeedcorr}
 \end{figure}
 
@@ -105,7 +109,7 @@ Although we are unable to predict both components of the wind speed, there is st
 		\includegraphics[width=0.45\textwidth]{figures/decaturin.jpg}
 		\label{fig:decaturin}
 	}
-	\caption{Further analysis of the wind speed predictions provides a way to predict the axis along which the flag is blowing. In Figure \ref{fig:windspeedscatter} the size and color of each marker is determined by the predicted wind speed and the location of each marker is determined by the north/south and east/west components of the actual wind speed at the same time. The dashed red line is the normal to the projection axis determined by running linear regression between the predict and actual values. Figure \ref{fig:decaturin} shows this axis overlaid on a Google Maps image with the field of view crudely estimated by hand.}
+	\caption[Further analysis of the wind speed predictions provides a way to predict the axis along which the flag is blowing]{Further analysis of the wind speed predictions provides a way to predict the axis along which the flag is blowing. In Figure \ref{fig:windspeedscatter} the size and color of each marker is determined by the predicted wind speed and the location of each marker is determined by the north/south and east/west components of the actual wind speed at the same time. The dashed red line is the normal to the projection axis determined by running linear regression between the predict and actual values. Figure \ref{fig:decaturin} shows this axis overlaid on a Google Maps image with the field of view crudely estimated by hand.}
 	\label{fig:winddirpred}
 \end{figure}
 
@@ -116,7 +120,7 @@ The CCA projections for this example were trained on 198 images captured from Ja
 \begin{figure}
 	\centering
 		\includegraphics[width=0.60\textwidth]{figures/vaporextremes.jpg}
-	\caption{Some sample images from camera $\#$619 of the AMOS database located in Houston, TX. The visibility of the distant skyline of buildings as well as the presence of clouds to helps to predict vapor pressure.}
+	\caption[Some sample images from camera $\#$619 of the AMOS database located in Houston, TX]{Some sample images from camera $\#$619 of the AMOS database located in Houston, TX. The visibility of the distant skyline of buildings as well as the presence of clouds to helps to predict vapor pressure.}
 	\label{fig:vaporextremes}
 \end{figure}
 
@@ -133,7 +137,7 @@ The gradient images will tend to highlight edges and other major changes in the 
 		\includegraphics[width=0.45\textwidth]{figures/vaporcomponents1.jpg}
 		\label{fig:vaporcomponents1}
 	}
-	\caption{The projections of the CCA basis vector computed with the regular and gradient images, respectively. Figure \ref{fig:vaporcomponents1-nongrad} does not identify a feature which actually correlates strongly with vapor pressure. However, when using the gradient image instead in Figure \ref{fig:vaporcomponents1}, the CCA basis clearly identifies the visibility of the skyline as an indicator of vapor pressure, which agrees with the hypothesis.}
+	\caption[The projections of the CCA basis vector computed with the regular and gradient images]{The projections of the CCA basis vector computed with the regular and gradient images, respectively. Figure \ref{fig:vaporcomponents1-nongrad} does not identify a feature which actually correlates strongly with vapor pressure. However, when using the gradient image instead in Figure \ref{fig:vaporcomponents1}, the CCA basis clearly identifies the visibility of the skyline as an indicator of vapor pressure, which agrees with the hypothesis.}
 	\label{fig:vaporcomponents}
 \end{figure}
 \begin{figure}
@@ -146,7 +150,7 @@ The gradient images will tend to highlight edges and other major changes in the 
 		\includegraphics[width=0.45\textwidth]{figures/vaporcorr.jpg}
 		\label{fig:vaporcorra}
 	}
-	\caption{Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images, respectively. While the correlation with the regular images (Figure \ref{fig:vaporcorrb}, $r=0.59968$) is not poor, there is a noticeable improvement when using the gradient images (Figure \ref{fig:vaporcorra}, $r=0.73684$).}
+	\caption[Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images]{Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images, respectively. While the correlation with the regular images (Figure \ref{fig:vaporcorrb}, $r=0.59968$) is not poor, there is a noticeable improvement when using the gradient images (Figure \ref{fig:vaporcorra}, $r=0.73684$).}
 	\label{fig:vaporcorr}
 \end{figure}
 
@@ -161,7 +165,7 @@ Further analysis of our results indicate that vapor pressure is being correctly 
 		\includegraphics[width=0.90\textwidth]{figures/vaportimeseriesimages.jpg}
 		\label{fig:vaportimeseriesimages}
 	}
-	\caption{Predicted wind speed values and corresponding ground truth values in millibars shown in Figure \ref{fig:vaportimeseries}. Each image in Figure \ref{fig:vaportimeseriesimages} is associated with one of the filled markers in the plot above. The poor predictions on March 12 are due to heavy fog which obscured the entire scene and left water on the optics.}
+	\caption[Predicted wind speed values and corresponding ground truth values in millibars]{Predicted wind speed values and corresponding ground truth values in millibars shown in Figure \ref{fig:vaportimeseries}. Each image in Figure \ref{fig:vaportimeseriesimages} is associated with one of the filled markers in the plot above. The poor predictions on March 12 are due to heavy fog which obscured the entire scene and left water on the optics.}
 	\label{fig:vaporpred}
 \end{figure}
 
@@ -169,23 +173,29 @@ Further analysis of our results indicate that vapor pressure is being correctly 
 \section{Error Analysis}
 A standard question that must be asked of any machine learning algorithm is: how large of a training dataset is necessary to build a strong model? A strong model is one that can predict our given weather data both accurately \textit{and} precisely. That is, predictions from novel data have small error residuals and are not biased in one direction or the other. The combination of accuracy and precision is a strong argument that the model is truly predicting weather data and not some other signal from the image that is similar to the weather. The goal now is to find the minimum number of data samples needed to build such a model. 
 
-% Prior work \cite{barcikowski} using Monte Carlo simulations has suggested that CCA requires the size of the training dataset to be between 40 and 60 times the number of variables being used in correlation analysis. While this may be true for general cases, we will argue here that a far smaller amount is required if the samples sufficiently cover the distribution of possible values.
+Prior work \cite{barcikowski} using Monte Carlo simulations has suggested that CCA requires the size of the training dataset to be between 40 and 60 times the number of variables being used in correlation analysis. While this may be true for general cases, we will argue here that a far smaller amount is required if the samples sufficiently cover the distribution of possible values.
 
-Recall the wind velocity examples presented in Section \ref{cpt:results}. We used 204 images to train the CCA projections and tested the results on 102 images. We will now analyze the performance of our algorithms on training sets of various sizes. The images will be selected in a contiguous block of days and will still be limited to those collected between 10 AM and 2 PM. As is seen in Figure \ref{fig:windcorrcompare}, we see that the rate at which the correlation coefficient $r$ improves stops changing drastically around 140 images.
+Recall the wind velocity  and vapor pressure examples used 204 and 198 images to train the CCA projections, respectively. They were tested using 102 and 99 images, respectively. We will now analyze the performance of our algorithms on training sets of various sizes. The images will be selected in a contiguous block of days and will still be limited to those collected between 10 AM and 2 PM. Figure \ref{fig:corrcomp} shows how the correlation coefficient $r$ changes as the number of training images changes between 10 and 200 images. We see that both graphs have flattened out by about 140 images, with the wind velocity plot (Figure \ref{fig:windcorrcomp}) actually flattening out around 80 images. Since images are being captured in AMOS every 30 minutes and using 4 hours worth of images for each day, this data indicates that we need just more than 2 weeks of data in order to build a reasonable model of a given weather signal. As wind velocity is a very clear signal, it is not surprising that $r$ converges much quicker in that case.
 
 \begin{figure}
 	\centering
-	\includegraphics{}
-	\caption{}
-	\label{fig:windcorrcompare}
+	\subfigure[]{
+		\includegraphics[width=0.45\textwidth]{figures/windcorrcomp.jpg}
+		\label{fig:windcorrcomp}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.45\textwidth]{figures/vaporcorrcomp.jpg}
+		\label{fig:vaporcorrcomp}
+	}
+	\caption[]{}
+	\label{fig:corrcomp}
 \end{figure}
 
 \chapter{Conclusion}
 \label{cpt:conclusion}
+Images inherently carry with them far more information than just the color of each pixel. By using regression and correlation techniques, it has been shown in this thesis that we are able to extract very useful information from these images, specifically with regards to weather signals, which vary with time as the images do. By using PCA and CCA, we are able to highlight the important changes occurring in the images and then associate those with weather signals such as wind velocity and vapor pressure. Furthermore, we used the results from a set of tests to determine that just more than 2 weeks of data are required to compute an accurate and precise model. While there is much value in being able to predict weather on an individual camera, such as the ability to fill in holes in reported weather data, the major payoff comes when we are able to predict the weather on many cameras with known locations.
 
-
-\chapter{Future Work}
-\label{cpt:future}
+\section{Future Work}
 One of the things which makes the AMOS dataset so special and unique is the extremely large number of cameras which is contains. However, only a very few of them are being taken advantage of in this thesis. The algorithm presented in this thesis has been shown to behave well on cameras whose scenes are very different and weather signals that vary as well.
 
 The goal of any future work on this subject should be to further automate the process of finding weather stations close to AMOS cameras, downloading the available weather data, and constantly running, and updating, CCA to predict a variety of weather signals on many cameras. This is very valuable work as it will allow us to analyze local weather patterns across multiple cameras and to infer the weather at other cameras using its location and the locations of other cameras around it. This will allow us to make weather predictions at locations that do not necessarily have a weather station within a reasonable vicinity. 
