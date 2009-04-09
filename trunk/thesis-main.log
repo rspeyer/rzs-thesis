@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.12.6)  9 APR 2009 10:58
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.12.6)  9 APR 2009 13:52
 entering extended mode
 **C:/Documents*and*Settings/Richard*Speyer/My*Documents/Research/Webcam*Signals/Thesis/thesis-main.tex
 (C:/Documents and Settings/Richard Speyer/My Documents/Research/Webcam Signals/Thesis/thesis-main.tex
@@ -307,26 +307,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
 ] [23
 
-]) (thesis-main.aux (thesis-front.aux) (thesis-chapters.aux) (thesis-appendices.aux) (thesis-back.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+]) (thesis-main.aux (thesis-front.aux) (thesis-chapters.aux) (thesis-appendices.aux) (thesis-back.aux)) ) 
 Here is how much of TeX's memory you used:
  2133 strings out of 95515
  29373 string characters out of 1189489
- 75589 words of memory out of 1075788
+ 75083 words of memory out of 1075794
  5008 multiletter control sequences out of 60000
  10227 words of font info for 36 fonts, out of 1000000 for 2000
  14 hyphenation exceptions out of 4999
- 33i,7n,34p,1289b,244s stack positions out of 5000i,500n,10000p,200000b,32768s
+ 33i,7n,34p,1279b,244s stack positions out of 5000i,500n,10000p,200000b,32768s
 PDF statistics:
  167 PDF objects out of 300000
  0 named destinations out of 300000
  81 words of extra memory for PDF output out of 65536
-<C:\texmf\fonts\type1\bluesky\cm\cmbx10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmr10.pfb><C:\texmf\fonts\type1\bluesky\c
-m\cmex10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmr8.pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy8.pfb><C:\texmf\fonts\type1\
-bluesky\cm\cmmi8.pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmmi12.pfb><C:\texmf\f
-onts\type1\bluesky\cm\cmsl12.pfb><C:\texmf\fonts\type1\bluesky\cm\cmbx12.pfb><C:\texmf\fonts\type1\bluesky\cm\cmti12.pfb
-><C:\texmf\fonts\type1\bluesky\cm\cmr12.pfb>
-Output written on thesis-main.pdf (30 pages, 1589132 bytes).
+<C:\texmf\fonts
+\type1\bluesky\cm\cmbx10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmr10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmex10.pfb><C:\
+texmf\fonts\type1\bluesky\cm\cmr8.pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy8.pfb><C:\texmf\fonts\type1\bluesky\cm\cmmi8.
+pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmmi12.pfb><C:\texmf\fonts\type1\bluesk
+y\cm\cmsl12.pfb><C:\texmf\fonts\type1\bluesky\cm\cmbx12.pfb><C:\texmf\fonts\type1\bluesky\cm\cmti12.pfb><C:\texmf\fonts\
+type1\bluesky\cm\cmr12.pfb>
+Output written on thesis-main.pdf (30 pages, 1588893 bytes).
