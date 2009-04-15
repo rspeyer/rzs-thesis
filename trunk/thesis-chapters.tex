@@ -124,7 +124,7 @@ The CCA projections for this example were trained on 198 images captured from Ja
 	\label{fig:vaporextremes}
 \end{figure}
 
-Unfortunately, when the algorithm is run exactly as described above, we get poor results that do not correlate very strongly with what we expect to change with vapor pressure. As is seen in Figure \ref{fig:vaporcomponents1-nongrad}, the reprojection of the single dimension of CCA does not yield a very convincing image. It appears that the CCA projection has identified the position of the sun against the buildings as one of the important factors, which does not have anything to do with vapor pressure. Despite CCA identifying this seemingly unrelated signal, the predictions yield a decent correlation $(r=0.59968)$ between themselves and the actual values, as seen in Figure \ref{fig:vaporcorrb}. In order to improve the predictions and identify a relevant feature in the image, the original images are replaced with their gradient magnitude images, which are computed as follows:
+Unfortunately, when the algorithm is run exactly as described above, we get poor results that do not correlate very strongly with what we expect to change with vapor pressure. As is seen in Figure \ref{fig:vaporcomponents1-nongrad}, the reprojection of the single dimension of CCA does not yield a very convincing image. It appears that the CCA projection has identified the position of the sun against the buildings as one of the important factors, which does not have anything to do with vapor pressure. Since CCA identified this seemingly unrelated signal, the predictions yield a mediocre correlation $(r=0.3894)$ between themselves and the actual values, as seen in Figure \ref{fig:vaporcorrb}. In order to improve the predictions and identify a relevant feature in the image, the original images are replaced with their gradient magnitude images, which are computed as follows:
 \begin{equation}\label{eq:grad}I_g=\sqrt{\frac{dI}{dx}^2 + \frac{dI}{dy}^2}\end{equation}
 The gradient images will tend to highlight edges and other major changes in the images. The projection of the CCA basis found when using these gradient images can is in Figure \ref{fig:vaporcomponents1} and, as we can see, clearly focuses on the visibility of the edges of the buildings, which is what was hypothesized to change with vapor pressure. Additionally, we get a stronger correlation between the actual and predicted values when using the gradient image $(r=0.73684)$.
 \begin{figure}
@@ -150,7 +150,7 @@ The gradient images will tend to highlight edges and other major changes in the 
 		\includegraphics[width=0.45\textwidth]{figures/vaporcorr.jpg}
 		\label{fig:vaporcorra}
 	}
-	\caption[Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images]{Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images, respectively. While the correlation with the regular images (Figure \ref{fig:vaporcorrb}, $r=0.59968$) is not poor, there is a noticeable improvement when using the gradient images (Figure \ref{fig:vaporcorra}, $r=0.73684$).}
+	\caption[Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images]{Scatter plots of the predicted vs. actual vapor pressures (in millibars) computed with the regular and gradient images, respectively. While the correlation with the regular images (Figure \ref{fig:vaporcorrb}, $r=0.3894$) is poor, there is a noticeable improvement when using the gradient images (Figure \ref{fig:vaporcorra}, $r=0.73684$).}
 	\label{fig:vaporcorr}
 \end{figure}
 
@@ -175,19 +175,19 @@ A standard question that must be asked of any machine learning algorithm is: how
 
 Prior work \cite{barcikowski} using Monte Carlo simulations has suggested that CCA requires the size of the training dataset to be between 40 and 60 times the number of variables being used in correlation analysis. While this may be true for general cases, we will argue here that a far smaller amount is required if the samples sufficiently cover the distribution of possible values.
 
-Recall the wind velocity  and vapor pressure examples used 204 and 198 images to train the CCA projections, respectively. They were tested using 102 and 99 images, respectively. We will now analyze the performance of our algorithms on training sets of various sizes. The images will be selected in a contiguous block of days and will still be limited to those collected between 10 AM and 2 PM. Figure \ref{fig:corrcomp} shows how the correlation coefficient $r$ changes as the number of training images changes between 10 and 200 images. We see that both graphs have flattened out by about 140 images, with the wind velocity plot (Figure \ref{fig:windcorrcomp}) actually flattening out around 80 images. Since images are being captured in AMOS every 30 minutes and using 4 hours worth of images for each day, this data indicates that we need just more than 2 weeks of data in order to build a reasonable model of a given weather signal. As wind velocity is a very clear signal, it is not surprising that $r$ converges much quicker in that case.
+Recall the wind velocity  and vapor pressure examples used 204 and 198 images to train the CCA projections, respectively. They were tested using 102 and 99 images, respectively. We will now analyze the performance of our algorithms on training sets of various sizes. The images are selected at random from the entire set. The algorithm tests the algorithm 10 times at each training size, varying the images used to train it randomly every time. This helps ensure that we do not get "lucky" with our selections and yield an unusually high correlation. Figure \ref{fig:corrcomp} shows how the correlation coefficient $r$ changes as the number of training images changes between 10 and 200 images. We see that both graphs have flattened out and the error bars have shrunk down by about 80 images. Since images are being captured in AMOS every 30 minutes and using 4 hours worth of images for each day, this data indicates that we need just more than 2 weeks of data in order to build a reasonable model of a given weather signal. As wind velocity is a very clear signal, it is not surprising that $r$ converges much quicker in that case.
 
 \begin{figure}
 	\centering
 	\subfigure[]{
-		\includegraphics[width=0.45\textwidth]{figures/windcorrcomp.jpg}
+		\includegraphics[width=0.75\textwidth]{figures/windspeedtrainsize.jpg}
 		\label{fig:windcorrcomp}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.45\textwidth]{figures/vaporcorrcomp.jpg}
+		\includegraphics[width=0.75\textwidth]{figures/vaportrainsize.jpg}
 		\label{fig:vaporcorrcomp}
 	}
-	\caption[]{PUT IN CAPTION}
+	\caption[Analysis of performance of our algorithms with varying training sizes]{The plots show the correlation coefficient (r) and how it varies with different amount of training data. The values along the line are computed as the average score over 10 different random training sets of the same size. The error bars show the minimum and maximum correlation coefficient at each given training size.}
 	\label{fig:corrcomp}
 \end{figure}
 
