@@ -10,10 +10,10 @@
 \contentsline {section}{\numberline {3.1}Wind Velocity}{8}
 \contentsline {section}{\numberline {3.2}Vapor Pressure}{13}
 \contentsline {section}{\numberline {3.3}Error Analysis}{15}
-\contentsline {chapter}{\numberline {4}Conclusion}{18}
-\contentsline {section}{\numberline {4.1}Future Work}{18}
-\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ A\hfill } Camera \& Weather Station Information}{20}
-\contentsline {section}{\numberline {A.1}Camera $\#$194 - Decatur, IN}{20}
-\contentsline {section}{\numberline {A.2}Camera $\#$619 - Houston, TX}{20}
-\contentsline {chapter}{References}{22}
-\contentsline {chapter}{Vita}{24}
+\contentsline {chapter}{\numberline {4}Conclusion}{19}
+\contentsline {section}{\numberline {4.1}Future Work}{19}
+\contentsline {chapter}{\hbox to \appendixhspace {Appendix\ A\hfill } Camera \& Weather Station Information}{21}
+\contentsline {section}{\numberline {A.1}Camera $\#$194 - Decatur, IN}{21}
+\contentsline {section}{\numberline {A.2}Camera $\#$619 - Houston, TX}{21}
+\contentsline {chapter}{References}{23}
+\contentsline {chapter}{Vita}{25}

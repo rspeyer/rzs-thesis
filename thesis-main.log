@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.24)  9 APR 2009 17:17
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.24)  14 APR 2009 19:49
 entering extended mode
 **C:/Documents*and*Settings/gpu/Desktop/Richard*Speyer/Webcam*Signals/papers/th
 esis/thesis-main.tex
@@ -221,7 +221,7 @@ File: figures/windspeedtimeseries.pdf Graphic file (type pdf)
 File: figures/windspeedtimeseriesimages.jpg Graphic file (type jpg)
 
 <use figures/windspeedtimeseriesimages.jpg>
-<figures/windspeedcorr.jpg, id=65, 641.39626pt x 454.69875pt>
+<figures/windspeedcorr.jpg, id=65, 690.58pt x 491.8375pt>
 File: figures/windspeedcorr.jpg Graphic file (type jpg)
 
 <use figures/windspeedcorr.jpg> [9 <figures/windspeedextremes.jpg>]
@@ -248,11 +248,11 @@ File: figures/vaporcomponents1-nongrad.jpg Graphic file (type jpg)
 File: figures/vaporcomponents1.jpg Graphic file (type jpg)
 
 <use figures/vaporcomponents1.jpg>
-<figures/vaporcorr-nongrad.jpg, id=97, 359.84438pt x 348.55219pt>
+<figures/vaporcorr-nongrad.jpg, id=97, 690.58pt x 491.8375pt>
 File: figures/vaporcorr-nongrad.jpg Graphic file (type jpg)
 
 <use figures/vaporcorr-nongrad.jpg>
-<figures/vaporcorr.jpg, id=98, 359.09157pt x 348.55219pt>
+<figures/vaporcorr.jpg, id=98, 690.58pt x 491.8375pt>
 File: figures/vaporcorr.jpg Graphic file (type jpg)
 
 <use figures/vaporcorr.jpg>
@@ -266,19 +266,19 @@ File: figures/vaportimeseriesimages.jpg Graphic file (type jpg)
 <use figures/vaportimeseriesimages.jpg> [14 <figures/vaporcomponents1-nongrad.j
 pg> <figures/vaporcomponents1.jpg>] [15 <figures/vaporcorr-nongrad.jpg> <figure
 s/vaporcorr.jpg>] [16 <figures/vaportimeseries.pdf> <figures/vaportimeseriesima
-ges.jpg>] <figures/windcorrcomp.jpg, id=115, 374.14781pt x 295.85532pt>
-File: figures/windcorrcomp.jpg Graphic file (type jpg)
+ges.jpg>] <figures/windspeedtrainsize.jpg, id=115, 690.58pt x 491.8375pt>
+File: figures/windspeedtrainsize.jpg Graphic file (type jpg)
 
-<use figures/windcorrcomp.jpg>
-<figures/vaporcorrcomp.jpg, id=116, 376.40625pt x 295.85532pt>
-File: figures/vaporcorrcomp.jpg Graphic file (type jpg)
+<use figures/windspeedtrainsize.jpg>
+<figures/vaportrainsize.jpg, id=116, 690.58pt x 491.8375pt>
+File: figures/vaportrainsize.jpg Graphic file (type jpg)
 
-<use figures/vaporcorrcomp.jpg> [17 <figures/windcorrcomp.jpg> <figures/vaporco
-rrcomp.jpg>]
+<use figures/vaportrainsize.jpg> [17] [18 <figures/windspeedtrainsize.jpg> <fig
+ures/vaportrainsize.jpg>]
 Chapter 4.
-) [18
+) [19
 
-] [19] (thesis-appendices.tex
+] [20] (thesis-appendices.tex
 Appendix A.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <17.28> on input line 4.
@@ -289,21 +289,21 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
 
-<figures/194.jpg, id=126, 154.176pt x 115.632pt>
+<figures/194.jpg, id=130, 154.176pt x 115.632pt>
 File: figures/194.jpg Graphic file (type jpg)
- <use figures/194.jpg> [20
+ <use figures/194.jpg> [21
 
 
 
- <figures/194.jpg>] <figures/619.jpg, id=132, 154.176pt x 115.632pt>
+ <figures/194.jpg>] <figures/619.jpg, id=135, 154.176pt x 115.632pt>
 File: figures/619.jpg Graphic file (type jpg)
 
-<use figures/619.jpg>) [21 <figures/619.jpg>] (thesis-back.tex (thesis-main.bbl
-[22
+<use figures/619.jpg>) [22 <figures/619.jpg>] (thesis-back.tex (thesis-main.bbl
+[23
 
 
 
-]) [23] (vita.tex
+]) [24] (vita.tex
 Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
@@ -318,15 +318,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
-) [24
+) [25
 
-] [24
+] [25
 
 ]) (thesis-main.aux (thesis-front.aux) (thesis-chapters.aux)
 (thesis-appendices.aux) (thesis-back.aux)) ) 
 Here is how much of TeX's memory you used:
  2468 strings out of 95340
- 37770 string characters out of 1184155
+ 37805 string characters out of 1184155
  97802 words of memory out of 1500000
  5605 multiletter control sequences out of 110000
  11150 words of font info for 39 fonts, out of 1200000 for 2000
@@ -343,9 +343,9 @@ am Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.
 7/fonts/type1/bluesky/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bl
 uesky/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy8.p
 fb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmti12.pfb>
-Output written on thesis-main.pdf (30 pages, 1710586 bytes).
+Output written on thesis-main.pdf (31 pages, 1664222 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
+ 194 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
