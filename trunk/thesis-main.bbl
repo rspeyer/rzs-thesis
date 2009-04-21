@@ -12,6 +12,12 @@ M.~Borga, H.~Knutsson, and T.~Landelius.
 \newblock Learning canonical correlations.
 \newblock In {\em SCIA10}, Lappeenranta, Finland, June 1997. SCIA.
 
+\bibitem{1119703}
+David~R. Hardoon, Sandor~R. Szedmak, and John~R. Shawe-taylor.
+\newblock Canonical correlation analysis: An overview with application to
+  learning methods.
+\newblock {\em Neural Comput.}, 16(12):2639--2664, 2004.
+
 \bibitem{im2gps}
 James Hays and Alexei~A. Efros.
 \newblock im2gps: estimating geographic information from a single image.

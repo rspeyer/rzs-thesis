@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.12.6)  20 APR 2009 19:28
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.12.6)  21 APR 2009 00:08
 entering extended mode
 **C:/Documents*and*Settings/Richard*Speyer/My*Documents/Research/Webcam*Signals/Thesis/thesis-main.tex
 (C:/Documents and Settings/Richard Speyer/My Documents/Research/Webcam Signals/Thesis/thesis-main.tex
@@ -267,12 +267,12 @@ File: figures/vaportimeseriesimages.jpg Graphic file (type jpg)
  <use figures/vaportimeseriesimages.jpg> [14 <figures/vaporcomponents1-nongrad.jpg> <figures/vaporcomponents1.jpg>] [15 
 <figures/vaporcorr-nongrad.jpg> <figures/vaporcorr.jpg>] [16 <figures/vaportimeseries-pic.jpg> <figures/vaportimeseriesi
 mages.jpg>]
-<figures/windspeedtrainsize.jpg, id=133, 690.58pt x 491.8375pt>
-File: figures/windspeedtrainsize.jpg Graphic file (type jpg)
- <use figures/windspeedtrainsize.jpg>
-<figures/vaportrainsize.jpg, id=134, 690.58pt x 491.8375pt>
-File: figures/vaportrainsize.jpg Graphic file (type jpg)
- <use figures/vaportrainsize.jpg> [17] [18 <figures/windspeedtrainsize.jpg> <figures/vaportrainsize.jpg>]
+<figures/windspeedtrainsize1.jpg, id=133, 456.95718pt x 306.39468pt>
+File: figures/windspeedtrainsize1.jpg Graphic file (type jpg)
+ <use figures/windspeedtrainsize1.jpg>
+<figures/vaportrainsize1.jpg, id=134, 453.94594pt x 304.13625pt>
+File: figures/vaportrainsize1.jpg Graphic file (type jpg)
+ <use figures/vaportrainsize1.jpg> [17] [18 <figures/windspeedtrainsize1.jpg> <figures/vaportrainsize1.jpg>]
 Chapter 4.
 ) [19
 
@@ -320,13 +320,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
 ]) (thesis-main.aux (thesis-front.aux) (thesis-chapters.aux) (thesis-appendices.aux) (thesis-back.aux)) ) 
 Here is how much of TeX's memory you used:
- 2191 strings out of 95515
- 30333 string characters out of 1189489
- 75663 words of memory out of 1075862
- 5048 multiletter control sequences out of 60000
+ 2192 strings out of 95515
+ 30352 string characters out of 1189489
+ 75667 words of memory out of 1075866
+ 5049 multiletter control sequences out of 60000
  11150 words of font info for 39 fonts, out of 1000000 for 2000
  14 hyphenation exceptions out of 4999
- 33i,7n,34p,1423b,244s stack positions out of 5000i,500n,10000p,200000b,32768s
+ 33i,7n,34p,1676b,244s stack positions out of 5000i,500n,10000p,200000b,32768s
 PDF statistics:
  174 PDF objects out of 300000
  0 named destinations out of 300000
@@ -337,4 +337,4 @@ exmf\fonts\type1\bluesky\cm\cmex10.pfb><C:\texmf\fonts\type1\bluesky\cm\cmr8.pfb
 pfb><C:\texmf\fonts\type1\bluesky\cm\cmmi8.pfb><C:\texmf\fonts\type1\bluesky\cm\cmsy10.pfb><C:\texmf\fonts\type1\bluesky
 \cm\cmmi12.pfb><C:\texmf\fonts\type1\bluesky\cm\cmsl12.pfb><C:\texmf\fonts\type1\bluesky\cm\cmbx12.pfb><C:\texmf\fonts\t
 ype1\bluesky\cm\cmti12.pfb><C:\texmf\fonts\type1\bluesky\cm\cmr12.pfb>
-Output written on thesis-main.pdf (31 pages, 1740057 bytes).
+Output written on thesis-main.pdf (31 pages, 1789893 bytes).
