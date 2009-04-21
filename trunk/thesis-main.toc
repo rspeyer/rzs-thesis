@@ -3,7 +3,7 @@
 \contentsline {chapter}{List of Figures}{v}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Related Work}{2}
-\contentsline {section}{\numberline {1.2}Background Information}{2}
+\contentsline {section}{\numberline {1.2}Background Information \& Dataset}{2}
 \contentsline {chapter}{\numberline {2}Canonical Correlation Analysis (CCA)}{4}
 \contentsline {section}{\numberline {2.1}Applications}{5}
 \contentsline {chapter}{\numberline {3}Results \& Analysis}{8}

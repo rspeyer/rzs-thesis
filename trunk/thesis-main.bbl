@@ -12,6 +12,12 @@ M.~Borga, H.~Knutsson, and T.~Landelius.
 \newblock Learning canonical correlations.
 \newblock In {\em SCIA10}, Lappeenranta, Finland, June 1997. SCIA.
 
+\bibitem{im2gps}
+James Hays and Alexei~A. Efros.
+\newblock im2gps: estimating geographic information from a single image.
+\newblock In {\em Proceedings of the {IEEE} Conf. on Computer Vision and
+  Pattern Recognition ({CVPR})}, 2008.
+
 \bibitem{hotelling}
 H.~Hotelling.
 \newblock Relations between two sets of variates.
@@ -42,6 +48,11 @@ Nathan Jacobs, Scott Satkin, Nathaniel Roman, Richard Speyer, and Robert Pless.
 \newblock Geolocating static cameras.
 \newblock In {\em Proc. IEEE International Conference on Computer Vision
   (ICCV)}, Rio De Janiero, Brazil, October 2007.
+
+\bibitem{lalonde-eccv-08}
+Jean-Fran\c{c}ois Lalonde, Srinivasa~G. Narasimhan, and Alexei~A. Efros.
+\newblock What does the sky tell us about the camera?
+\newblock In {\em European Conference on Computer Vision}, 2008.
 
 \bibitem{957143}
 Dongge Li, Nevenka Dimitrova, Mingkun Li, and Ishwar~K. Sethi.
